@@ -1,0 +1,72 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+const Process = ({ data }) => {
+  const { processHeaderBlock, processHeading, processCopy, processColumns } =
+    data;
+  const processHeaderImg = getImage(processHeaderBlock.processHeaderBlockImage);
+  return (
+    <section className="process">
+      <div className="process__header-block">
+        <p className="process__header-block-copy">
+          {processHeaderBlock.processHeaderBlockCopy}
+        </p>
+        <GatsbyImage
+          className="process__header-block-image"
+          image={processHeaderImg}
+          alt={processHeaderBlock.processHeaderBlockImage.altText}
+        />
+      </div>
+      <h2 className="process__heading">{processHeading}</h2>
+      <div
+        className="process__copy"
+        dangerouslySetInnerHTML={{ __html: processCopy }}
+      />
+      <div className="process__columns">
+        {processColumns.map((item) => (
+          <div key={item.processColumnCopy} className="process__column">
+            <img
+              className="process__column-icon"
+              src={item.processColumnIcon.sourceUrl}
+              alt={item.processColumnIcon.altText}
+              loading="lazy"
+              width="130"
+              height="130"
+              decoding="async"
+            />
+            <div
+              className="process__column-copy"
+              dangerouslySetInnerHTML={{ __html: item.processColumnCopy }}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+Process.propTypes = {
+  data: PropTypes.shape({
+    processHeaderBlock: PropTypes.shape({
+      processHeaderBlockCopy: PropTypes.string,
+      processHeaderBlockImage: PropTypes.shape({
+        gatsbyImage: PropTypes.shape({}),
+        altText: PropTypes.string,
+      }),
+    }),
+    processHeading: PropTypes.string,
+    processCopy: PropTypes.string,
+    processColumns: PropTypes.arrayOf(
+      PropTypes.shape({
+        processColumnIcon: PropTypes.shape({
+          sourceUrl: PropTypes.string,
+          altText: PropTypes.string,
+        }),
+        processColumnCopy: PropTypes.string,
+      })
+    ),
+  }).isRequired,
+};
+
+export default Process;
