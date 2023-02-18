@@ -1,0 +1,54 @@
+.people {
+  margin-bottom: $space-600;
+
+  @include mq($L) {
+    margin-bottom: $space-700;
+  }
+
+  &__heading {
+    margin-bottom: $space-600;
+    text-align: center;
+  }
+
+  &__subheading {
+    margin-bottom: $space-300;
+    text-align: center;
+  }
+
+  &__image {
+    margin-bottom: $space-500;
+  }
+
+  &__copy {
+    margin-bottom: $space-600;
+    text-align: center;
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: $space-600;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &-image {
+      &-wrapper {
+        margin-bottom: $space-300;
+        width: 100%;
+      }
+
+      max-width: 10rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &-title {
+      margin-top: 0;
+    }
+  }
+}

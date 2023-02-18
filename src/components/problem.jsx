@@ -5,20 +5,23 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 const Problem = ({ data }) => {
   const { problemImage, problemHeading, leftColumn, rightColumn } = data;
   const problemImg = getImage(problemImage);
+
   return (
-    <section className="problem">
-      <GatsbyImage
-        className="problem__image"
-        image={problemImg}
-        alt={problemImage.altText}
-      />
-      <h2>{problemHeading}</h2>
+    <section className="problem" id="problem">
+      <div className="problem__image-wrapper">
+        <GatsbyImage
+          className="problem__image"
+          image={problemImg}
+          alt={problemImage.altText}
+        />
+      </div>
+      <h2 className="problem__heading">{problemHeading}</h2>
       <div className="problem__columns">
         <div className="problem__column">
           <h3 className="problem__column-heading">
             {leftColumn.problemLeftColumnHeading}
           </h3>
-          <p
+          <div
             className="problem__column-copy"
             dangerouslySetInnerHTML={{
               __html: leftColumn.problemLeftColumnCopy,
@@ -34,7 +37,7 @@ const Problem = ({ data }) => {
             decoding="async"
           />
           <p className="problem__column-icon-text">
-            {leftColumn.problemLeftColumnIconText}
+            <small>{leftColumn.problemLeftColumnIconText}</small>
           </p>
         </div>
         <div className="problem__column">
@@ -57,7 +60,7 @@ const Problem = ({ data }) => {
             decoding="async"
           />
           <p className="problem__column-icon-text">
-            {rightColumn.problemRightColumnIconText}
+            <small>{rightColumn.problemRightColumnIconText}</small>
           </p>
         </div>
       </div>

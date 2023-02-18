@@ -41,21 +41,23 @@ $black: rgb(0, 0, 0);
 $red: #710000;
 $yellow: #f7f71d;
 
-$blue: #3da4ce;
+$beige: #fbf9ec;
 
 // COLOR CONFIGS
 // ------------------------------------------------------------------------------
-$bg-clr: $color-grey-9;
-$text-clr: $color-grey-2;
+$bg-clr: $beige;
+$text-clr: $black;
 $link-clr: $color-grey-1;
-$link-hover-clr: darken($link-clr, 20%);
-$highlight-clr: $red;
+$link-hover-clr: $color-grey-2;
 $error: $red;
 $selection: $yellow;
 
 // SPACING
 // ------------------------------------------------------------------------------
-$container-width: 800px;
+$container-width-small: 940px;
+$container-width-medium: 1068;
+$container-width-large: 1360px;
+
 $space: 1.5rem; // 24px
 
 $space-100: math.div($space, 8); // 2px

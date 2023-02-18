@@ -1,0 +1,38 @@
+.products {
+  border-top: 6px solid $black;
+  margin-bottom: $space-600;
+  padding-top: $space-600;
+
+  @include mq($L) {
+    margin-bottom: $space-700;
+    padding-top: $space-700;
+  }
+
+  &__heading {
+    margin-bottom: $space-400;
+    text-align: center;
+  }
+
+  &__copy {
+    margin-bottom: $space-600;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-400;
+  }
+
+  &__item {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: $space-400;
+    padding: $space-200 $space-400;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

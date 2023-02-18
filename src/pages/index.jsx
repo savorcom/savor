@@ -13,10 +13,10 @@ import People from '../components/people';
 import Contact from '../components/contact';
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
     <SEO title="Home" />
+    <Hero data={data.allWpPage.edges[0].node.HomeHero} />
     <div className="container">
-      <Hero data={data.allWpPage.edges[0].node.HomeHero} />
       <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
       <Process data={data.allWpPage.edges[0].node.HomeProcess} />
       <Products data={data.allWpPage.edges[0].node.HomeProducts} />
@@ -28,6 +28,22 @@ const IndexPage = ({ data }) => (
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
+    allWpMenu: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            menuItems: PropTypes.shape({
+              nodes: PropTypes.arrayOf(
+                PropTypes.shape({
+                  label: PropTypes.string,
+                  path: PropTypes.string,
+                })
+              ),
+            }),
+          }),
+        })
+      ),
+    }),
     allWpPage: PropTypes.shape({
       edges: PropTypes.arrayOf(
         PropTypes.shape({
@@ -145,6 +161,18 @@ IndexPage.propTypes = {
 
 export const query = graphql`
   query {
+    allWpMenu {
+      edges {
+        node {
+          menuItems {
+            nodes {
+              label
+              path
+            }
+          }
+        }
+      }
+    }
     allWpPage {
       edges {
         node {

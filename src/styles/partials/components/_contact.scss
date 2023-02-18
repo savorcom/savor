@@ -1,0 +1,24 @@
+.contact {
+  margin-bottom: $space-400;
+  position: relative;
+
+  @include mq($L) {
+    margin-bottom: $space-700;
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: column;
+    gap: $space-500;
+  }
+
+  &__divider {
+    margin-top: $space-300;
+    @include mq($L) {
+      bottom: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}

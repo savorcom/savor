@@ -2,9 +2,40 @@
 // ==== HEADER
 // ===========================================================================
 .header {
+  margin-top: $space-700;
+
+  @include mq($M) {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
   > .container {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+  }
+
+  &__logo {
+    height: 45px;
+    margin-bottom: $space-400;
+    width: 163px;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $space-400;
+    row-gap: $space-200;
+    justify-content: center;
+  }
+
+  &__link {
+    color: $black;
+    font-size: 1.5rem;
+    text-decoration: none;
   }
 }

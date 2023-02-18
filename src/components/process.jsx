@@ -6,17 +6,20 @@ const Process = ({ data }) => {
   const { processHeaderBlock, processHeading, processCopy, processColumns } =
     data;
   const processHeaderImg = getImage(processHeaderBlock.processHeaderBlockImage);
+
   return (
-    <section className="process">
+    <section className="process" id="processs">
       <div className="process__header-block">
         <p className="process__header-block-copy">
           {processHeaderBlock.processHeaderBlockCopy}
         </p>
-        <GatsbyImage
-          className="process__header-block-image"
-          image={processHeaderImg}
-          alt={processHeaderBlock.processHeaderBlockImage.altText}
-        />
+        <div className="process__header-block-image-wrapper">
+          <GatsbyImage
+            className="process__header-block-image"
+            image={processHeaderImg}
+            alt={processHeaderBlock.processHeaderBlockImage.altText}
+          />
+        </div>
       </div>
       <h2 className="process__heading">{processHeading}</h2>
       <div

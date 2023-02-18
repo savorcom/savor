@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import Marquee from 'react-fast-marquee';
 
 const Hero = ({ data }) => {
   const { heroHeading, heroCopy, heroImage, marquee } = data;
@@ -8,27 +9,41 @@ const Hero = ({ data }) => {
 
   return (
     <section className="hero">
-      <div className="hero__wrapper">
-        <GatsbyImage
-          className="hero__image"
-          image={heroImg}
-          alt={heroImage.altText}
-        />
-        <div className="hero__content">
-          <h1 className="hero__heading">{heroHeading}</h1>
-          <div
-            className="hero__copy"
-            dangerouslySetInnerHTML={{ __html: heroCopy }}
+      <div className="container">
+        <div className="hero__wrapper">
+          <GatsbyImage
+            className="hero__image"
+            image={heroImg}
+            alt={heroImage.altText}
           />
+          <div className="hero__content">
+            <h1 className="hero__heading">{heroHeading}</h1>
+            <div
+              className="hero__copy"
+              dangerouslySetInnerHTML={{ __html: heroCopy }}
+            />
+          </div>
         </div>
       </div>
-      <div className="hero__marquee">
-        {marquee.map((item) => (
-          <span key={item.marqueeItem} className="hero__marquee-item">
-            {item.marqueeItem}
-          </span>
-        ))}
-      </div>
+
+      <Marquee gradient={false} speed="5">
+        <div className="hero__marquee hero__marquee--small">
+          {marquee.map((item) => (
+            <span key={item.marqueeItem} className="hero__marquee-item">
+              {item.marqueeItem}
+            </span>
+          ))}
+        </div>
+      </Marquee>
+      <Marquee gradient={false} speed="5" direction="right">
+        <div className="hero__marquee hero__marquee--large">
+          {marquee.map((item) => (
+            <span key={item.marqueeItem} className="hero__marquee-item">
+              {item.marqueeItem}
+            </span>
+          ))}
+        </div>
+      </Marquee>
     </section>
   );
 };

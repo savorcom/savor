@@ -60,7 +60,7 @@ module.exports = {
         background_color: `#fbf9ec`, // background color for the website
         theme_color: `#fbf9ec`, // background color or primary brand color
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // favicon. Path is relative to the root of the site.
+        icon: `src/images/savor-favicon.svg`, // favicon. Path is relative to the root of the site.
       },
     },
     {

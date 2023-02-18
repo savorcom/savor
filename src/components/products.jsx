@@ -4,8 +4,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Products = ({ data }) => {
   const { productsHeading, productsCopy, products } = data;
+
   return (
-    <section className="products">
+    <section className="products" id="product">
       <h2 className="products__heading">{productsHeading}</h2>
       <div
         className="products__copy"
@@ -21,7 +22,7 @@ const Products = ({ data }) => {
                 image={productImg}
                 alt={item.productImage.altText}
               />
-              <p className="products__copys">{item.productTitle}</p>
+              <p className="products__title">{item.productTitle}</p>
             </li>
           );
         })}

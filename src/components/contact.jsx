@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import bottomDivider from '../images/bottom-divider.svg';
+
 const Contact = ({ data }) => {
   const { columns } = data;
+
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2 className="visuallyhidden">Contact</h2>
       <div className="contact__columns">
         {columns.map((item) => (
@@ -20,6 +23,7 @@ const Contact = ({ data }) => {
           </div>
         ))}
       </div>
+      <img className="contact__divider" src={bottomDivider} alt="" />
     </section>
   );
 };

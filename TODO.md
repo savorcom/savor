@@ -1,18 +1,12 @@
 - [ ] Project repo setup
+
   - [ ] Custom fonts
     - [ ] Add any custom fonts to `static/fonts` directory
     - [ ] Update the `fonts.css` file in that directory
   - [ ] Update `gatsby-config.js`
     - [ ] Update the `gatsby-plugin-web-font-loader` section to point to the custom fonts
     - [ ] Restart local server
-- [ ] Update variables.scss file
-- [ ] Add logo as SVG asset
-- [ ] Header component
-- [ ] Footer component
-- [ ] Homepage
-- [ ] Interior pages(s)
-- [ ] Create interior page template(s) used in gatsby-node
-- [ ] Get content from WP API
+
 - [ ] Custom 404 page or redirect to homepage
 - [ ] Add [schema.org](http://schema.org/) metadata
 - [ ] Testing

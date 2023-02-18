@@ -14,7 +14,7 @@ const People = ({ data }) => {
   const peopleImg = getImage(peopleImage);
 
   return (
-    <section className="people">
+    <section className="people" id="people">
       <h2 className="people__heading">{peopleHeading}</h2>
       <p className="people__subheading">{peopleSubheading}</p>
       <GatsbyImage
@@ -28,11 +28,13 @@ const People = ({ data }) => {
           const principalImg = getImage(item.peoplePrincipalImage);
           return (
             <li key={item.peoplePrincipalName} className="people__item">
-              <GatsbyImage
-                className="people__item-image"
-                image={principalImg}
-                alt={item.peoplePrincipalImage.altText}
-              />
+              <div className="people__item-image-wrapper">
+                <GatsbyImage
+                  className="people__item-image"
+                  image={principalImg}
+                  alt={item.peoplePrincipalImage.altText}
+                />
+              </div>
               <p className="people__item-name">{item.peoplePrincipalName}</p>
               <p className="people__item-title">{item.peoplePrincipalTitle}</p>
             </li>
@@ -44,11 +46,13 @@ const People = ({ data }) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
           return (
             <li key={item.peopleEmployeeName} className="people__item">
-              <GatsbyImage
-                className="people__item-image"
-                image={employeeImg}
-                alt={item.peopleEmployeeImage.altText}
-              />
+              <div className="people__item-image-wrapper">
+                <GatsbyImage
+                  className="people__item-image"
+                  image={employeeImg}
+                  alt={item.peopleEmployeeImage.altText}
+                />
+              </div>
               <p className="people__item-name">{item.peopleEmployeeName}</p>
               <p className="people__item-title">{item.peopleEmployeeTitle}</p>
             </li>
