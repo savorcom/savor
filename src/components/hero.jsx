@@ -17,7 +17,10 @@ const Hero = ({ data }) => {
             alt={heroImage.altText}
           />
           <div className="hero__content">
-            <h1 className="hero__heading">{heroHeading}</h1>
+            <div
+              className="hero__heading"
+              dangerouslySetInnerHTML={{ __html: heroHeading }}
+            />
             <div
               className="hero__copy"
               dangerouslySetInnerHTML={{ __html: heroCopy }}
@@ -26,7 +29,7 @@ const Hero = ({ data }) => {
         </div>
       </div>
 
-      <Marquee gradient={false} speed="5">
+      <Marquee gradient={false} speed="10">
         <div className="hero__marquee hero__marquee--small">
           {marquee.map((item) => (
             <span key={item.marqueeItem} className="hero__marquee-item">
@@ -35,7 +38,7 @@ const Hero = ({ data }) => {
           ))}
         </div>
       </Marquee>
-      <Marquee gradient={false} speed="5" direction="right">
+      <Marquee gradient={false} speed="10" direction="right">
         <div className="hero__marquee hero__marquee--large">
           {marquee.map((item) => (
             <span key={item.marqueeItem} className="hero__marquee-item">

@@ -11,8 +11,19 @@
   }
 
   &__subheading {
+    font-family: $font-serif-xlight-italic;
+    font-size: 2rem;
+    line-height: 1;
     margin-bottom: $space-300;
     text-align: center;
+
+    @include mq($M) {
+      font-size: 2.75rem;
+    }
+
+    @include mq($XL) {
+      font-size: 3rem;
+    }
   }
 
   &__image {
@@ -45,6 +56,10 @@
       max-width: 10rem;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    &-name {
+      font-family: $font-sans-bold;
     }
 
     &-title {

@@ -35,13 +35,20 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        google: {
-          families: ['Open Sans:400,700'],
-        },
-        // custom: {
-        //   families: ['CUSTOMFONT1, CUSTOMFONT2'],
-        //   urls: ['/fonts/fonts.css'],
+        // google: {
+        //   families: ['Open Sans:400,700'],
         // },
+        custom: {
+          families: [
+            'PTSans-Regular',
+            'PTSans-Bold',
+            'Restora-Regular',
+            'Restora-Italic',
+            'Restora-Light',
+            'Restora-ExtraLight-Italic',
+          ],
+          urls: ['/fonts/fonts.css'],
+        },
       },
     },
     {

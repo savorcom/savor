@@ -3,25 +3,15 @@
 // ===========================================================================
 @use 'sass:math';
 
-// RESPONSIVE MEDIA QUERIES
-// ------------------------------------------------------------------------------
-$breakpoint-xs: 18.75em; // 300px
-$breakpoint-s: 30em; // 480px
-$breakpoint-m: 48em; // 768px
-$breakpoint-l: 64em; // 1024px
-$breakpoint-xl: 75em; // 1200px
-$breakpoint-xxl: 90em; // 1440px
-
-$XS: 'min-width:' + $breakpoint-xs;
-$S: 'min-width:' + $breakpoint-s;
-$M: 'min-width:' + $breakpoint-m;
-$L: 'min-width:' + $breakpoint-l;
-$XL: 'min-width:' + $breakpoint-xl;
-$XXL: 'min-width:' + $breakpoint-xxl;
-
 // FONTS
 // ------------------------------------------------------------------------------
 $font-med: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+$font-sans-reg: 'PTSans-Regular', $font-med;
+$font-sans-bold: 'PTSans-Bold', $font-med;
+$font-serif-reg: 'Restora-Regular', serif;
+$font-serif-italic: 'Restora-Italic', serif;
+$font-serif-light: 'Restora-Light', serif;
+$font-serif-xlight-italic: 'Restora-ExtraLight-Italic', serif;
 
 // COLORS
 // ------------------------------------------------------------------------------
@@ -70,3 +60,19 @@ $space-700: $space * 3; // 72px
 $space-800: $space * 4; // 96px
 $space-850: $space * 6; // 144px
 $space-900: $space * 8; // 192px
+
+// RESPONSIVE MEDIA QUERIES
+// ------------------------------------------------------------------------------
+$breakpoint-xs: 18.75em; // 300px
+$breakpoint-s: 30em; // 480px
+$breakpoint-m: 48em; // 768px
+$breakpoint-l: 64em; // 1024px
+$breakpoint-xl: 75em; // 1200px
+$breakpoint-xxl: 90em; // 1440px
+
+$XS: 'min-width:' + $breakpoint-xs;
+$S: 'min-width:' + $breakpoint-s;
+$M: 'min-width:' + $breakpoint-m;
+$L: 'min-width:' + $breakpoint-l;
+$XL: 'min-width:' + $breakpoint-xl;
+$XXL: 'min-width:' + $breakpoint-xxl;

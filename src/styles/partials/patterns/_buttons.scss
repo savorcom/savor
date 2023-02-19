@@ -2,15 +2,31 @@
 
 .button {
   background-color: transparent;
-  border: 1px solid $color-grey-2;
+  border: 2px solid $color-grey-2;
   border-radius: 25px;
   color: $color-grey-2;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
   line-height: 1;
-  padding: math.div($space, 1.5) $space * 1.5;
+  max-width: 15rem;
+  padding: $space-300;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.2s ease-out, border-color 0.2s ease-out,
     color 0.2s ease-out;
+
+  &--primary {
+    &::after {
+      content: '⟶';
+      transform: translateY(-0.125rem);
+    }
+  }
+
+  &--secondary {
+    font-family: $font-serif-light;
+    text-transform: none;
+  }
 
   &:focus,
   &:hover {

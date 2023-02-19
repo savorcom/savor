@@ -15,11 +15,10 @@ const Contact = ({ data }) => {
             <h3 className="contact__column-heading">
               {item.contactColumnHeading}
             </h3>
-            <div
-              className="contact__column-copy"
-              dangerouslySetInnerHTML={{ __html: item.contactColumnCopy }}
-            />
-            <a href="/">{item.contactColumnButtonText}</a>
+            <p className="contact__column-copy">{item.contactColumnCopy}</p>
+            <a className={`button button--${item.buttonType}`} href="/">
+              {item.contactColumnButtonText}
+            </a>
           </div>
         ))}
       </div>
@@ -35,6 +34,7 @@ Contact.propTypes = {
         contactColumnHeading: PropTypes.string,
         contactColumnCopy: PropTypes.string,
         contactColumnButtonText: PropTypes.string,
+        buttonType: PropTypes.string,
       })
     ),
   }).isRequired,

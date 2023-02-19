@@ -28,11 +28,13 @@
     background-color: $white;
     display: flex;
     flex-direction: column;
-    gap: $space-400;
+    gap: $space-200;
     padding: $space-200 $space-400;
   }
 
   &__title {
+    font-family: $font-serif-italic;
+    font-size: 2rem;
     text-align: center;
   }
 }

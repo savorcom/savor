@@ -7,7 +7,6 @@
     - [ ] Update the `gatsby-plugin-web-font-loader` section to point to the custom fonts
     - [ ] Restart local server
 
-- [ ] Custom 404 page or redirect to homepage
 - [ ] Add [schema.org](http://schema.org/) metadata
 - [ ] Testing
   - [ ] Cross-browser testing

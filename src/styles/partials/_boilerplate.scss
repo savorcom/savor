@@ -139,48 +139,44 @@ li {
 
 h1,
 .h1 {
-  font-size: 2.5rem;
-  line-height: 1.25;
+  font-size: 2.875rem;
+  line-height: 1;
 
   @include mq($M) {
-    font-size: 2.75rem;
-    line-height: 1.125;
+    font-size: 3.25rem;
   }
 
   @include mq($XL) {
-    font-size: 3rem;
-    line-height: 1.05;
+    font-size: 3.5rem;
   }
 }
 
 h2,
 .h2 {
-  font-size: 1.5rem;
-  line-height: 1.15384615;
+  font-size: 2.5rem;
+  line-height: 1;
 
   @include mq($M) {
-    font-size: 1.625rem;
-    line-height: 1.25;
+    font-size: 2.75rem;
   }
 
   @include mq($XL) {
-    font-size: 1.75rem;
-    line-height: 1.25;
+    font-size: 3rem;
   }
 }
 
 h3,
 .h3 {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.13636364;
 
   @include mq($M) {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     line-height: 1.25;
   }
 
   @include mq($XL) {
-    font-size: 1.375rem;
+    font-size: 2rem;
     line-height: 1.25;
   }
 }

@@ -10,11 +10,14 @@
     background-color: $black;
     display: flex;
     margin-bottom: $space-500;
-    padding: $space-400;
-    padding-bottom: 0;
+    padding-left: $space-400;
+    padding-right: $space-400;
 
     &-copy {
       color: $white;
+      font-family: $font-serif-xlight-italic;
+      font-size: 1.5rem;
+      line-height: 1.25;
     }
 
     &-image {
