@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Products = ({ data }) => {
-  const { productsHeading, productsCopy, products } = data;
+  const { productsHeading, productsCopy, products, productsSectionId } = data;
 
   return (
-    <section className="products" id="product">
+    <section className="products" id={productsSectionId}>
       <h2 className="products__heading">{productsHeading}</h2>
       <div
         className="products__copy"
@@ -33,6 +33,7 @@ const Products = ({ data }) => {
 
 Products.propTypes = {
   data: PropTypes.shape({
+    productsSectionId: PropTypes.string,
     productsHeading: PropTypes.string,
     productsCopy: PropTypes.string,
     products: PropTypes.arrayOf(

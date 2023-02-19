@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Process = ({ data }) => {
-  const { processHeaderBlock, processHeading, processCopy, processColumns } =
-    data;
+  const {
+    processHeaderBlock,
+    processHeading,
+    processCopy,
+    processColumns,
+    processSectionId,
+  } = data;
   const processHeaderImg = getImage(processHeaderBlock.processHeaderBlockImage);
 
   return (
-    <section className="process" id="processs">
+    <section className="process" id={processSectionId}>
       <div className="process__header-block">
         <p className="process__header-block-copy">
           {processHeaderBlock.processHeaderBlockCopy}
@@ -51,6 +56,7 @@ const Process = ({ data }) => {
 
 Process.propTypes = {
   data: PropTypes.shape({
+    processSectionId: PropTypes.string,
     processHeaderBlock: PropTypes.shape({
       processHeaderBlockCopy: PropTypes.string,
       processHeaderBlockImage: PropTypes.shape({

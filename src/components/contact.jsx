@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import bottomDivider from '../images/bottom-divider.svg';
 
 const Contact = ({ data }) => {
-  const { columns } = data;
+  const { columns, contactSectionId } = data;
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id={contactSectionId}>
       <h2 className="visuallyhidden">Contact</h2>
       <div className="contact__columns">
         {columns.map((item) => (
@@ -29,6 +29,7 @@ const Contact = ({ data }) => {
 
 Contact.propTypes = {
   data: PropTypes.shape({
+    contactSectionId: PropTypes.string,
     columns: PropTypes.arrayOf(
       PropTypes.shape({
         contactColumnHeading: PropTypes.string,

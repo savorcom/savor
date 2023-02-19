@@ -10,11 +10,12 @@ const People = ({ data }) => {
     peopleCopy,
     peoplePrincipals,
     peopleEmployees,
+    peopleSectionId,
   } = data;
   const peopleImg = getImage(peopleImage);
 
   return (
-    <section className="people" id="people">
+    <section className="people" id={peopleSectionId}>
       <h2 className="people__heading">{peopleHeading}</h2>
       <p className="people__subheading">{peopleSubheading}</p>
       <GatsbyImage
@@ -65,6 +66,7 @@ const People = ({ data }) => {
 
 People.propTypes = {
   data: PropTypes.shape({
+    peopleSectionId: PropTypes.string,
     peopleHeading: PropTypes.string,
     peopleSubheading: PropTypes.string,
     peopleImage: PropTypes.shape({

@@ -196,6 +196,7 @@ export const query = graphql`
             }
           }
           HomeProblem {
+            problemSectionId
             problemImage {
               gatsbyImage(
                 breakpoints: [376, 769, 1200]
@@ -229,6 +230,7 @@ export const query = graphql`
             }
           }
           HomeProcess {
+            processSectionId
             processHeaderBlock {
               processHeaderBlockCopy
               processHeaderBlockImage {
@@ -255,6 +257,7 @@ export const query = graphql`
             }
           }
           HomeProducts {
+            productsSectionId
             productsHeading
             productsCopy
             products {
@@ -274,6 +277,7 @@ export const query = graphql`
             }
           }
           HomePeople {
+            peopleSectionId
             peopleHeading
             peopleSubheading
             peopleImage {
@@ -323,6 +327,7 @@ export const query = graphql`
             }
           }
           HomeContact {
+            contactSectionId
             columns {
               contactColumnHeading
               contactColumnCopy

@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Problem = ({ data }) => {
-  const { problemImage, problemHeading, leftColumn, rightColumn } = data;
+  const {
+    problemImage,
+    problemHeading,
+    leftColumn,
+    rightColumn,
+    problemSectionId,
+  } = data;
   const problemImg = getImage(problemImage);
 
   return (
-    <section className="problem" id="problem">
+    <section className="problem" id={problemSectionId}>
       <div className="problem__image-wrapper">
         <GatsbyImage
           className="problem__image"
@@ -70,6 +76,7 @@ const Problem = ({ data }) => {
 
 Problem.propTypes = {
   data: PropTypes.shape({
+    problemSectionId: PropTypes.string,
     problemImage: PropTypes.shape({
       gatsbyImage: PropTypes.shape({}),
       altText: PropTypes.string,
