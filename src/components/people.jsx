@@ -1,6 +1,9 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+import { useWindowSize } from '../hooks/useWindowSize';
 
 const People = ({ data }) => {
   const {
@@ -13,6 +16,10 @@ const People = ({ data }) => {
     peopleSectionId,
   } = data;
   const peopleImg = getImage(peopleImage);
+
+  const size = useWindowSize();
+  const isSmallBreakpoint = size.width >= 480;
+  const isMediumBreakpoint = size.width >= 768;
 
   return (
     <section className="people" id={peopleSectionId}>
@@ -37,7 +44,10 @@ const People = ({ data }) => {
                 />
               </div>
               <p className="people__item-name">{item.peoplePrincipalName}</p>
-              <p className="people__item-title">{item.peoplePrincipalTitle}</p>
+              <div
+                className="people__item-title"
+                dangerouslySetInnerHTML={{ __html: item.peoplePrincipalTitle }}
+              />
             </li>
           );
         })}
@@ -46,7 +56,17 @@ const People = ({ data }) => {
         {peopleEmployees.map((item) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
           return (
-            <li key={item.peopleEmployeeName} className="people__item">
+            <li
+              key={item.peopleEmployeeName}
+              className="people__item"
+              style={{
+                flexBasis: isMediumBreakpoint
+                  ? `calc((100% / ${peopleEmployees.length}) - 4.5rem)`
+                  : isSmallBreakpoint
+                  ? 'calc(50% - 3rem)'
+                  : '100%',
+              }}
+            >
               <div className="people__item-image-wrapper">
                 <GatsbyImage
                   className="people__item-image"
@@ -55,7 +75,10 @@ const People = ({ data }) => {
                 />
               </div>
               <p className="people__item-name">{item.peopleEmployeeName}</p>
-              <p className="people__item-title">{item.peopleEmployeeTitle}</p>
+              <div
+                className="people__item-title"
+                dangerouslySetInnerHTML={{ __html: item.peopleEmployeeTitle }}
+              />
             </li>
           );
         })}

@@ -1,27 +1,41 @@
 .products {
-  border-top: 6px solid $black;
   margin-bottom: $space-600;
-  padding-top: $space-600;
 
   @include mq($L) {
     margin-bottom: $space-700;
-    padding-top: $space-700;
   }
 
   &__heading {
     margin-bottom: $space-400;
     text-align: center;
+
+    @include mq($M) {
+      margin-bottom: $space-600;
+    }
   }
 
   &__copy {
     margin-bottom: $space-600;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56rem;
     text-align: center;
+
+    p {
+      max-width: none;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: $space-400;
+
+    @include mq($S) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -30,6 +44,18 @@
     flex-direction: column;
     gap: $space-200;
     padding: $space-200 $space-400;
+
+    @include mq($S) {
+      flex-basis: calc(50% - #{$space-400});
+    }
+
+    @include mq($M) {
+      flex-basis: calc(33.33333% - #{$space-400});
+    }
+
+    @include mq($L) {
+      flex-basis: calc(20% - #{$space-400});
+    }
   }
 
   &__title {

@@ -45,7 +45,7 @@ $selection: $yellow;
 // SPACING
 // ------------------------------------------------------------------------------
 $container-width-small: 940px;
-$container-width-medium: 1068;
+$container-width-medium: 1068px;
 $container-width-large: 1360px;
 
 $space: 1.5rem; // 24px
@@ -55,7 +55,9 @@ $space-200: math.div($space, 4); // 4px
 $space-300: math.div($space, 2); // 8px
 $space-400: $space * 0.75; // 12px
 $space-500: $space; // 24px
+$space-550: $space * 1.5; // 36px
 $space-600: $space * 2; // 48px
+$space-650: $space * 2.5; // 60px
 $space-700: $space * 3; // 72px
 $space-800: $space * 4; // 96px
 $space-850: $space * 6; // 144px

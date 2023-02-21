@@ -9,7 +9,7 @@ const Header = ({ menuItems }) => (
     <div className="container">
       <img className="header__logo" src={savorLogo} alt="Savor logo" />
 
-      <nav className="header__nav">
+      <nav className="nav">
         <ul className="nav__list">
           {menuItems.map((item) => (
             <li className="nav__item" key={item.label}>

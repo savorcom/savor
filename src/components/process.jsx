@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -15,9 +16,12 @@ const Process = ({ data }) => {
   return (
     <section className="process" id={processSectionId}>
       <div className="process__header-block">
-        <p className="process__header-block-copy">
-          {processHeaderBlock.processHeaderBlockCopy}
-        </p>
+        <div
+          className="process__header-block-copy"
+          dangerouslySetInnerHTML={{
+            __html: processHeaderBlock.processHeaderBlockCopy,
+          }}
+        />
         <div className="process__header-block-image-wrapper">
           <GatsbyImage
             className="process__header-block-image"

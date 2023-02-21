@@ -1,5 +1,6 @@
 .people {
   margin-bottom: $space-600;
+  max-width: 73.75rem;
 
   @include mq($L) {
     margin-bottom: $space-700;
@@ -15,10 +16,13 @@
     font-size: 2rem;
     line-height: 1;
     margin-bottom: $space-300;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 
     @include mq($M) {
       font-size: 2.75rem;
+      margin-bottom: $space-550;
     }
 
     @include mq($XL) {
@@ -28,18 +32,35 @@
 
   &__image {
     margin-bottom: $space-500;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 44rem;
   }
 
   &__copy {
     margin-bottom: $space-600;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
     text-align: center;
   }
 
   &__list {
-    align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: $space-600;
+    justify-content: center;
+
+    @include mq($M) {
+      &:first-of-type {
+        margin-bottom: $space-600;
+      }
+    }
+
+    @include mq($L) {
+      gap: $space-700;
+    }
   }
 
   &__item {
@@ -60,10 +81,12 @@
 
     &-name {
       font-family: $font-sans-bold;
+      text-align: center;
     }
 
     &-title {
       margin-top: 0;
+      text-align: center;
     }
   }
 }

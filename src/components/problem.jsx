@@ -24,27 +24,31 @@ const Problem = ({ data }) => {
       <h2 className="problem__heading">{problemHeading}</h2>
       <div className="problem__columns">
         <div className="problem__column">
-          <h3 className="problem__column-heading">
-            {leftColumn.problemLeftColumnHeading}
-          </h3>
-          <div
-            className="problem__column-copy"
-            dangerouslySetInnerHTML={{
-              __html: leftColumn.problemLeftColumnCopy,
-            }}
-          />
-          <img
-            className="problem__column-icon"
-            src={leftColumn.problemLeftColumnIcon.sourceUrl}
-            alt={leftColumn.problemLeftColumnIcon.altText}
-            loading="lazy"
-            width="280"
-            height="139"
-            decoding="async"
-          />
-          <p className="problem__column-icon-text">
-            <small>{leftColumn.problemLeftColumnIconText}</small>
-          </p>
+          <div>
+            <h3 className="problem__column-heading">
+              {leftColumn.problemLeftColumnHeading}
+            </h3>
+            <div
+              className="problem__column-copy"
+              dangerouslySetInnerHTML={{
+                __html: leftColumn.problemLeftColumnCopy,
+              }}
+            />
+          </div>
+          <div>
+            <img
+              className="problem__column-icon"
+              src={leftColumn.problemLeftColumnIcon.sourceUrl}
+              alt={leftColumn.problemLeftColumnIcon.altText}
+              loading="lazy"
+              width="280"
+              height="139"
+              decoding="async"
+            />
+            <p className="problem__column-icon-text">
+              <small>{leftColumn.problemLeftColumnIconText}</small>
+            </p>
+          </div>
         </div>
         <div className="problem__column">
           <h3 className="problem__column-heading">

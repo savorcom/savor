@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
 
   return (
     <section className="hero">
-      <div className="container">
+      <div className="container hero__content-wrapper">
         <div className="hero__wrapper">
           <GatsbyImage
             className="hero__image"
@@ -36,10 +36,20 @@ const Hero = ({ data }) => {
               {item.marqueeItem}
             </span>
           ))}
+          {marquee.map((item) => (
+            <span key={item.marqueeItem} className="hero__marquee-item">
+              {item.marqueeItem}
+            </span>
+          ))}
         </div>
       </Marquee>
       <Marquee gradient={false} speed="10" direction="right">
         <div className="hero__marquee hero__marquee--large">
+          {marquee.map((item) => (
+            <span key={item.marqueeItem} className="hero__marquee-item">
+              {item.marqueeItem}
+            </span>
+          ))}
           {marquee.map((item) => (
             <span key={item.marqueeItem} className="hero__marquee-item">
               {item.marqueeItem}
