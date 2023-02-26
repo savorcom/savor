@@ -9,6 +9,7 @@
     margin-bottom: $space-500;
     padding-left: $space-500;
     padding-right: $space-500;
+    position: relative;
 
     @include mq($M) {
       margin-bottom: $space-600;
@@ -47,6 +48,28 @@
         @include mq($M) {
           padding-top: $space-600;
         }
+      }
+    }
+
+    &-arrows {
+      bottom: -$space-700;
+      position: absolute;
+      left: 1rem;
+
+      @include mq($S) {
+        left: 5rem;
+      }
+
+      @include mq($M) {
+        left: 13rem;
+      }
+
+      @include mq($L) {
+        left: 18rem;
+      }
+
+      @include mq($XL) {
+        left: 21rem;
       }
     }
   }

@@ -3,6 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import arrows from '../images/arrows.svg';
+
 const Process = ({ data }) => {
   const {
     processHeaderBlock,
@@ -29,6 +31,14 @@ const Process = ({ data }) => {
             alt={processHeaderBlock.processHeaderBlockImage.altText}
           />
         </div>
+        <img
+          className="process__header-block-arrows"
+          src={arrows}
+          alt=""
+          width="48"
+          height="108"
+          aria-hidden="true"
+        />
       </div>
       <h2 className="process__heading">{processHeading}</h2>
       <div

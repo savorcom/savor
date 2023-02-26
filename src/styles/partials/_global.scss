@@ -10,6 +10,14 @@ body {
   @include mq($L) {
     border-bottom: 18px solid $black;
   }
+
+  @include mq($XL) {
+    border-bottom: 24px solid $black;
+  }
+
+  @include mq($XXL) {
+    border-bottom: 36px solid $black;
+  }
 }
 
 main,

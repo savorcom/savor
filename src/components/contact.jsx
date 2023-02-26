@@ -16,7 +16,10 @@ const Contact = ({ data }) => {
               {item.contactColumnHeading}
             </h3>
             <p className="contact__column-copy">{item.contactColumnCopy}</p>
-            <a className={`button button--${item.buttonType}`} href="/">
+            <a
+              className={`contact__button button button--${item.buttonType}`}
+              href="/"
+            >
               {item.contactColumnButtonText}
             </a>
           </div>

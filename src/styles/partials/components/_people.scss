@@ -1,9 +1,9 @@
 .people {
-  margin-bottom: $space-600;
+  margin-bottom: $space-700;
   max-width: 73.75rem;
 
   @include mq($L) {
-    margin-bottom: $space-700;
+    margin-bottom: $space-800;
   }
 
   &__heading {
