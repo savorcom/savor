@@ -46,23 +46,23 @@ const Process = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: processCopy }}
       />
       <div className="process__columns">
-        {processColumns.map((item) => (
-          <div key={item.processColumnCopy} className="process__column">
-            <img
-              className="process__column-icon"
-              src={item.processColumnIcon.sourceUrl}
-              alt={item.processColumnIcon.altText}
-              loading="lazy"
-              width="130"
-              height="130"
-              decoding="async"
-            />
-            <div
-              className="process__column-copy"
-              dangerouslySetInnerHTML={{ __html: item.processColumnCopy }}
-            />
-          </div>
-        ))}
+        {processColumns.map((item) => {
+          const processColIcon = getImage(item.processColumnIcon);
+
+          return (
+            <div key={item.processColumnCopy} className="process__column">
+              <GatsbyImage
+                className="process__column-icon"
+                image={processColIcon}
+                alt={item.processColumnIcon.altText}
+              />
+              <div
+                className="process__column-copy"
+                dangerouslySetInnerHTML={{ __html: item.processColumnCopy }}
+              />
+            </div>
+          );
+        })}
       </div>
     </section>
   );

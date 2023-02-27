@@ -11,6 +11,8 @@ const Problem = ({ data }) => {
     problemSectionId,
   } = data;
   const problemImg = getImage(problemImage);
+  const leftColImg = getImage(leftColumn.problemLeftColumnIcon);
+  const rightColImg = getImage(rightColumn.problemRightColumnIcon);
 
   return (
     <section className="problem" id={problemSectionId}>
@@ -36,14 +38,10 @@ const Problem = ({ data }) => {
             />
           </div>
           <div>
-            <img
+            <GatsbyImage
               className="problem__column-icon"
-              src={leftColumn.problemLeftColumnIcon.sourceUrl}
+              image={leftColImg}
               alt={leftColumn.problemLeftColumnIcon.altText}
-              loading="lazy"
-              width="280"
-              height="139"
-              decoding="async"
             />
             <p className="problem__column-icon-text">
               <small>{leftColumn.problemLeftColumnIconText}</small>
@@ -60,14 +58,10 @@ const Problem = ({ data }) => {
               __html: rightColumn.problemRightColumnCopy,
             }}
           />
-          <img
+          <GatsbyImage
             className="problem__column-icon"
-            src={rightColumn.problemRightColumnIcon.sourceUrl}
+            image={rightColImg}
             alt={rightColumn.problemRightColumnIcon.altText}
-            loading="lazy"
-            width="280"
-            height="139"
-            decoding="async"
           />
           <p className="problem__column-icon-text">
             <small>{rightColumn.problemRightColumnIconText}</small>

@@ -214,7 +214,14 @@ export const query = graphql`
               problemLeftColumnHeading
               problemLeftColumnCopy
               problemLeftColumnIcon {
-                sourceUrl
+                gatsbyImage(
+                  cropFocus: CENTER
+                  fit: COVER
+                  formats: [AUTO, WEBP, AVIF]
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  width: 280
+                )
                 altText
               }
               problemLeftColumnIconText
@@ -223,7 +230,14 @@ export const query = graphql`
               problemRightColumnHeading
               problemRightColumnCopy
               problemRightColumnIcon {
-                sourceUrl
+                gatsbyImage(
+                  cropFocus: CENTER
+                  fit: COVER
+                  formats: [AUTO, WEBP, AVIF]
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  width: 280
+                )
                 altText
               }
               problemRightColumnIconText
@@ -250,7 +264,14 @@ export const query = graphql`
             processCopy
             processColumns {
               processColumnIcon {
-                sourceUrl
+                gatsbyImage(
+                  cropFocus: CENTER
+                  fit: COVER
+                  formats: [AUTO, WEBP, AVIF]
+                  layout: FULL_WIDTH
+                  placeholder: BLURRED
+                  width: 130
+                )
                 altText
               }
               processColumnCopy
