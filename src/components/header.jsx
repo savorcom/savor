@@ -22,8 +22,6 @@ const Header = ({ menuItems }) => {
       } else {
         removeClassOnScroll();
       }
-
-      console.log(scrollPos);
     });
   }, []);
 
