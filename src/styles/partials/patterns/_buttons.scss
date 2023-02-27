@@ -2,9 +2,9 @@
 
 .button {
   background-color: transparent;
-  border: 2px solid $color-grey-2;
+  border: 2px solid $black;
   border-radius: 25px;
-  color: $color-grey-2;
+  color: $black;
   display: flex;
   font-size: 1rem;
   justify-content: space-around;
@@ -30,44 +30,44 @@
 
   &:focus,
   &:hover {
-    background-color: $color-grey-2;
-    color: $color-grey-1;
+    background-color: $black;
+    color: $white;
 
     .button__icon {
-      fill: $color-grey-1;
+      fill: $white;
     }
   }
 
   &--reversed {
-    border-color: $color-grey-1;
-    color: $color-grey-1;
+    border-color: $white;
+    color: $white;
 
     &:focus,
     &:hover {
-      background-color: $color-grey-1;
-      color: $color-grey-2;
+      background-color: $white;
+      color: $black;
     }
   }
 
   &--solid {
-    background-color: $color-grey-1;
-    color: $color-grey-2;
+    background-color: $white;
+    color: $black;
 
     &:focus,
     &:hover {
-      background-color: $color-grey-2;
-      color: $color-grey-1;
+      background-color: $black;
+      color: $white;
     }
 
     &.button--reversed {
-      background-color: $color-grey-2;
-      color: $color-grey-1;
+      background-color: $black;
+      color: $white;
 
       &:focus,
       &:hover {
-        background-color: $color-grey-1;
-        border-color: $color-grey-2;
-        color: $color-grey-2;
+        background-color: $white;
+        border-color: $black;
+        color: $black;
       }
     }
   }
