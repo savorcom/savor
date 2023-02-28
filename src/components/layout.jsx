@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
 import '../styles/main.scss';
 
@@ -8,6 +9,11 @@ import Drip from './drip';
 
 const Layout = ({ children, menuItems }) => (
   <Fragment>
+    <Helmet
+      bodyAttributes={{
+        id: 'savor',
+      }}
+    />
     <a className="skip-link" href="#main">
       skip to main content
     </a>

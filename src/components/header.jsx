@@ -28,7 +28,7 @@ const Header = ({ menuItems }) => {
   return (
     <header className="header" role="banner">
       <div className="container">
-        <AnchorLink className="header__logo-link" href="/">
+        <AnchorLink className="header__logo-link" href="#savor">
           <img className="header__logo" src={savorLogo} alt="Savor logo" />
         </AnchorLink>
 
