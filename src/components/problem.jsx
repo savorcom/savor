@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Problem = ({ data }) => {
   const {
@@ -25,48 +26,60 @@ const Problem = ({ data }) => {
       </div>
       <h2 className="problem__heading">{problemHeading}</h2>
       <div className="problem__columns">
-        <div className="problem__column">
-          <div>
+        <AnimationOnScroll
+          animateIn="animate__fadeInLeft"
+          duration={3}
+          animateOnce
+        >
+          <div className="problem__column">
+            <div>
+              <h3 className="problem__column-heading">
+                {leftColumn.problemLeftColumnHeading}
+              </h3>
+              <div
+                className="problem__column-copy"
+                dangerouslySetInnerHTML={{
+                  __html: leftColumn.problemLeftColumnCopy,
+                }}
+              />
+            </div>
+            <div>
+              <GatsbyImage
+                className="problem__column-icon"
+                image={leftColImg}
+                alt={leftColumn.problemLeftColumnIcon.altText}
+              />
+              <p className="problem__column-icon-text">
+                <small>{leftColumn.problemLeftColumnIconText}</small>
+              </p>
+            </div>
+          </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll
+          animateIn="animate__fadeInRight"
+          duration={3}
+          animateOnce
+        >
+          <div className="problem__column">
             <h3 className="problem__column-heading">
-              {leftColumn.problemLeftColumnHeading}
+              {rightColumn.problemRightColumnHeading}
             </h3>
             <div
               className="problem__column-copy"
               dangerouslySetInnerHTML={{
-                __html: leftColumn.problemLeftColumnCopy,
+                __html: rightColumn.problemRightColumnCopy,
               }}
             />
-          </div>
-          <div>
             <GatsbyImage
               className="problem__column-icon"
-              image={leftColImg}
-              alt={leftColumn.problemLeftColumnIcon.altText}
+              image={rightColImg}
+              alt={rightColumn.problemRightColumnIcon.altText}
             />
             <p className="problem__column-icon-text">
-              <small>{leftColumn.problemLeftColumnIconText}</small>
+              <small>{rightColumn.problemRightColumnIconText}</small>
             </p>
           </div>
-        </div>
-        <div className="problem__column">
-          <h3 className="problem__column-heading">
-            {rightColumn.problemRightColumnHeading}
-          </h3>
-          <div
-            className="problem__column-copy"
-            dangerouslySetInnerHTML={{
-              __html: rightColumn.problemRightColumnCopy,
-            }}
-          />
-          <GatsbyImage
-            className="problem__column-icon"
-            image={rightColImg}
-            alt={rightColumn.problemRightColumnIcon.altText}
-          />
-          <p className="problem__column-icon-text">
-            <small>{rightColumn.problemRightColumnIconText}</small>
-          </p>
-        </div>
+        </AnimationOnScroll>
       </div>
     </section>
   );

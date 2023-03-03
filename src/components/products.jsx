@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Products = ({ data }) => {
   const { productsHeading, productsCopy, products, productsSectionId } = data;
@@ -13,16 +14,24 @@ const Products = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: productsCopy }}
       />
       <ul className="products__list">
-        {products.map((item) => {
+        {products.map((item, index) => {
           const productImg = getImage(item.productImage);
           return (
             <li key={item.productTitle} className="products__item">
-              <GatsbyImage
-                className="products__image"
-                image={productImg}
-                alt={item.productImage.altText}
-              />
-              <p className="products__title">{item.productTitle}</p>
+              <AnimationOnScroll
+                animateIn="animate__fadeInUp"
+                duration={1.25}
+                delay={index * 250}
+                animateOnce
+                className="products__item-wrapper"
+              >
+                <GatsbyImage
+                  className="products__image"
+                  image={productImg}
+                  alt={item.productImage.altText}
+                />
+                <p className="products__title">{item.productTitle}</p>
+              </AnimationOnScroll>
             </li>
           );
         })}

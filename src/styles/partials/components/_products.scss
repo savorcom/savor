@@ -39,11 +39,9 @@
   }
 
   &__item {
-    background-color: $white;
     display: flex;
     flex-direction: column;
     gap: $space-200;
-    padding: $space-200 $space-400;
 
     @include mq($S) {
       flex-basis: calc(50% - #{$space-400});
@@ -55,6 +53,11 @@
 
     @include mq($L) {
       flex-basis: calc(20% - #{$space-400});
+    }
+
+    &-wrapper {
+      background-color: $white;
+      padding: $space-200 $space-400;
     }
   }
 

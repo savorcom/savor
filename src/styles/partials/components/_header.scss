@@ -14,23 +14,23 @@
     position: sticky;
     top: 0;
     z-index: 2;
-  }
 
-  &::before {
-    background-image: linear-gradient(
-      90deg,
-      rgb(236, 169, 91),
-      rgb(248, 209, 109)
-    );
-    bottom: 0;
-    content: '';
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: opacity 0.3s ease-out;
-    z-index: -1;
+    &::before {
+      background-image: linear-gradient(
+        90deg,
+        rgb(236, 169, 91),
+        rgb(248, 209, 109)
+      );
+      bottom: 0;
+      content: '';
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 1.5s ease-out;
+      z-index: -1;
+    }
   }
 
   &__background {

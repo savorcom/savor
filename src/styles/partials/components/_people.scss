@@ -68,10 +68,13 @@
     display: flex;
     flex-direction: column;
 
+    &-content-wrapper {
+      width: 100%;
+    }
+
     &-image {
       &-wrapper {
         margin-bottom: $space-300;
-        width: 100%;
       }
 
       border-radius: 50%;

@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { useWindowSize } from '../hooks/useWindowSize';
 
@@ -32,28 +33,37 @@ const People = ({ data }) => {
       />
       <p className="people__copy">{peopleCopy}</p>
       <ul className="people__list">
-        {peoplePrincipals.map((item) => {
+        {peoplePrincipals.map((item, index) => {
           const principalImg = getImage(item.peoplePrincipalImage);
           return (
             <li key={item.peoplePrincipalName} className="people__item">
-              <div className="people__item-image-wrapper">
-                <GatsbyImage
-                  className="people__item-image"
-                  image={principalImg}
-                  alt={item.peoplePrincipalImage.altText}
+              <AnimationOnScroll
+                animateIn="animate__fadeIn"
+                duration={1.25}
+                delay={index * 250}
+                animateOnce
+              >
+                <div className="people__item-image-wrapper">
+                  <GatsbyImage
+                    className="people__item-image"
+                    image={principalImg}
+                    alt={item.peoplePrincipalImage.altText}
+                  />
+                </div>
+                <p className="people__item-name">{item.peoplePrincipalName}</p>
+                <div
+                  className="people__item-title"
+                  dangerouslySetInnerHTML={{
+                    __html: item.peoplePrincipalTitle,
+                  }}
                 />
-              </div>
-              <p className="people__item-name">{item.peoplePrincipalName}</p>
-              <div
-                className="people__item-title"
-                dangerouslySetInnerHTML={{ __html: item.peoplePrincipalTitle }}
-              />
+              </AnimationOnScroll>
             </li>
           );
         })}
       </ul>
       <ul className="people__list">
-        {peopleEmployees.map((item) => {
+        {peopleEmployees.map((item, index) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
           return (
             <li
@@ -67,18 +77,26 @@ const People = ({ data }) => {
                   : '100%',
               }}
             >
-              <div className="people__item-image-wrapper">
-                <GatsbyImage
-                  className="people__item-image"
-                  image={employeeImg}
-                  alt={item.peopleEmployeeImage.altText}
+              <AnimationOnScroll
+                animateIn="animate__fadeIn"
+                duration={1.5}
+                delay={peoplePrincipals.length * 250 + index * 250}
+                animateOnce
+                className="people__item-content-wrapper"
+              >
+                <div className="people__item-image-wrapper">
+                  <GatsbyImage
+                    className="people__item-image"
+                    image={employeeImg}
+                    alt={item.peopleEmployeeImage.altText}
+                  />
+                </div>
+                <p className="people__item-name">{item.peopleEmployeeName}</p>
+                <div
+                  className="people__item-title"
+                  dangerouslySetInnerHTML={{ __html: item.peopleEmployeeTitle }}
                 />
-              </div>
-              <p className="people__item-name">{item.peopleEmployeeName}</p>
-              <div
-                className="people__item-title"
-                dangerouslySetInnerHTML={{ __html: item.peopleEmployeeTitle }}
-              />
+              </AnimationOnScroll>
             </li>
           );
         })}

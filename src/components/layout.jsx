@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import '../styles/main.scss';
+import 'animate.css/animate.min.css';
 
 import Header from './header';
 import Drip from './drip';

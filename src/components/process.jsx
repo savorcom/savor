@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import arrows from '../images/arrows.svg';
 
@@ -31,14 +32,14 @@ const Process = ({ data }) => {
             alt={processHeaderBlock.processHeaderBlockImage.altText}
           />
         </div>
-        <img
+        <AnimationOnScroll
+          animateIn="animate__slideInDown"
+          duration={1}
+          animateOnce
           className="process__header-block-arrows"
-          src={arrows}
-          alt=""
-          width="48"
-          height="108"
-          aria-hidden="true"
-        />
+        >
+          <img src={arrows} alt="" width="48" height="108" aria-hidden="true" />
+        </AnimationOnScroll>
       </div>
       <h2 className="process__heading">{processHeading}</h2>
       <div
@@ -46,16 +47,23 @@ const Process = ({ data }) => {
         dangerouslySetInnerHTML={{ __html: processCopy }}
       />
       <div className="process__columns">
-        {processColumns.map((item) => {
+        {processColumns.map((item, index) => {
           const processColIcon = getImage(item.processColumnIcon);
 
           return (
             <div key={item.processColumnCopy} className="process__column">
-              <GatsbyImage
-                className="process__column-icon"
-                image={processColIcon}
-                alt={item.processColumnIcon.altText}
-              />
+              <AnimationOnScroll
+                animateIn="fadeInAndGrow"
+                duration={2}
+                delay={index * 250}
+                animateOnce
+              >
+                <GatsbyImage
+                  className="process__column-icon"
+                  image={processColIcon}
+                  alt={item.processColumnIcon.altText}
+                />
+              </AnimationOnScroll>
               <div
                 className="process__column-copy"
                 dangerouslySetInnerHTML={{ __html: item.processColumnCopy }}
