@@ -117,6 +117,30 @@ p:has(small) {
   }
 }
 
+.iframe-container {
+  height: 0;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &.iframe-container-16x9 {
+    padding-bottom: 56.25%; // for 16x9 windows
+  }
+
+  &.iframe-container-4x3 {
+    padding-bottom: 75%; // for 4x3 windows
+  }
+
+  iframe {
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
 .container {
   padding: 0 $space-500;
   margin-left: auto;
