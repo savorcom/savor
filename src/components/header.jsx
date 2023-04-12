@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll-v2';
 
-import savorLogo from '../images/savor-logo.svg';
+import SavorLogo from './logo';
 
 const Header = ({ menuItems }) => {
   useEffect(() => {
@@ -29,7 +29,7 @@ const Header = ({ menuItems }) => {
     <header className="header" role="banner">
       <div className="container">
         <AnchorLink className="header__logo-link" href="#savor">
-          <img className="header__logo" src={savorLogo} alt="Savor logo" />
+          <SavorLogo className="header__logo" />
         </AnchorLink>
 
         <nav className="nav">

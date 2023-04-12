@@ -2,15 +2,16 @@
 // ==== HEADER
 // ===========================================================================
 .header {
-  padding-top: $space-700;
+  margin-bottom: $space-800;
+  padding-top: $space-600;
   position: relative;
   transition: background-image 0.3s ease-out;
   width: 100%;
 
-  @include mq($M) {
-    margin-bottom: $space-800;
+  @include mq($L) {
+    margin-bottom: $space-850;
     padding-bottom: $space-200;
-    padding-top: $space-400;
+    padding-top: $space-300;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -18,8 +19,8 @@
     &::before {
       background-image: linear-gradient(
         90deg,
-        rgb(236, 169, 91),
-        rgb(248, 209, 109)
+        rgb(156, 126, 82),
+        rgb(223, 154, 100)
       );
       bottom: 0;
       content: '';
@@ -33,9 +34,13 @@
     }
   }
 
+  @include mq($XL) {
+    padding-top: $space-400;
+  }
+
   &__background {
     &::before {
-      opacity: 0.9625;
+      opacity: 0.975;
     }
   }
 
@@ -44,11 +49,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 73.75rem;
+    max-width: 87.75rem;
     margin-left: auto;
     margin-right: auto;
 
-    @include mq($M) {
+    @include mq($L) {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -63,6 +68,14 @@
     margin-bottom: $space-400;
     width: 163px;
 
+    path {
+      fill: $black;
+
+      @include mq($L) {
+        fill: $white;
+      }
+    }
+
     &-link {
       outline: none;
 
@@ -73,12 +86,20 @@
       &:focus-visible {
         border-bottom: 1px solid $black;
       }
+
+      @include mq($L) {
+        margin-left: $space-700;
+      }
+
+      @include mq($XL) {
+        margin-left: $space-850;
+      }
     }
   }
 }
 
 .nav {
-  @include mq($M) {
+  @include mq($L) {
     transform: translateY(-0.5rem);
   }
 
@@ -105,11 +126,13 @@
 
   &__link {
     color: $black;
+    font-family: $font-sans-bold;
     font-size: 1.5rem;
     outline: none;
     text-decoration: none;
 
-    @include mq($M) {
+    @include mq($L) {
+      color: $white;
       font-size: 1.25rem;
     }
 
