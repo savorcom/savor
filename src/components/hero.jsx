@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import Marquee from 'react-fast-marquee';
 
 const Hero = ({ data }) => {
-  const { heroHeading, heroCopy, heroImage, marquee } = data;
+  const { heroHeading, heroCopy, heroImage } = data;
   const heroImg = getImage(heroImage);
 
   return (
@@ -28,35 +27,6 @@ const Hero = ({ data }) => {
           </div>
         </div>
       </div>
-
-      <Marquee gradient={false} speed="10">
-        <div className="hero__marquee hero__marquee--small">
-          {marquee.map((item) => (
-            <span key={item.marqueeItem} className="hero__marquee-item">
-              {item.marqueeItem}
-            </span>
-          ))}
-          {marquee.map((item) => (
-            <span key={item.marqueeItem} className="hero__marquee-item">
-              {item.marqueeItem}
-            </span>
-          ))}
-        </div>
-      </Marquee>
-      <Marquee gradient={false} speed="10" direction="right">
-        <div className="hero__marquee hero__marquee--large">
-          {marquee.map((item) => (
-            <span key={item.marqueeItem} className="hero__marquee-item">
-              {item.marqueeItem}
-            </span>
-          ))}
-          {marquee.map((item) => (
-            <span key={item.marqueeItem} className="hero__marquee-item">
-              {item.marqueeItem}
-            </span>
-          ))}
-        </div>
-      </Marquee>
     </section>
   );
 };
@@ -69,11 +39,6 @@ Hero.propTypes = {
       gatsbyImage: PropTypes.shape({}),
       altText: PropTypes.string,
     }),
-    marquee: PropTypes.arrayOf(
-      PropTypes.shape({
-        marqueeItem: PropTypes.string,
-      })
-    ),
   }).isRequired,
 };
 
