@@ -8,6 +8,7 @@ module.exports = {
   },
   trailingSlash: 'never',
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
