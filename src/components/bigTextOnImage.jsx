@@ -4,44 +4,45 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import DripBorder from './dripBorder';
 
-const BigTextOnImage = () => (
-  <section
-    className="big-text-on-image"
-    style={{
-      backgroundImage: `url(https://picsum.photos/1600/900)`,
-    }}
-  >
-    <div className="big-text-on-image__text-wrapper">
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        delay={0}
-        duration={2}
-        animateOnce
-      >
-        <p>Craveworthy</p>
-      </AnimationOnScroll>
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        delay={500}
-        duration={2}
-        animateOnce
-      >
-        <p>+ Sustainable</p>
-      </AnimationOnScroll>
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        delay={1000}
-        duration={2}
-        animateOnce
-      >
-        <p>= Impact</p>
-      </AnimationOnScroll>
-    </div>
-    <DripBorder />
-  </section>
-);
+const BigTextOnImage = ({ data }) => {
+  const { backgroundImage, textLines } = data;
+  return (
+    <section
+      className="big-text-on-image"
+      style={{
+        backgroundImage: `url(${backgroundImage.mediaItemUrl})`,
+      }}
+    >
+      <div className="big-text-on-image__text-wrapper">
+        {textLines.map((line, index) => (
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            delay={index * 500}
+            duration={2}
+            animateOnce
+            key={line.textLine}
+          >
+            <p>{line.textLine}</p>
+          </AnimationOnScroll>
+        ))}
+      </div>
+      <DripBorder />
+    </section>
+  );
+};
 
-BigTextOnImage.propTypes = {};
+BigTextOnImage.propTypes = {
+  data: PropTypes.shape({
+    backgroundImage: PropTypes.shape({
+      mediaItemUrl: PropTypes.string,
+    }),
+    textLines: PropTypes.arrayOf(
+      PropTypes.shape({
+        textLine: PropTypes.string,
+      })
+    ),
+  }).isRequired,
+};
 
 BigTextOnImage.defaultProps = {};
 

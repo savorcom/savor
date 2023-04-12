@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
     <div className="container">
       <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
     </div>
-    <BigTextOnImage />
+    <BigTextOnImage data={data.allWpPage.edges[0].node.HomeBigTextOnImage} />
     <div className="container">
       <Process data={data.allWpPage.edges[0].node.HomeProcess} />
       <Products data={data.allWpPage.edges[0].node.HomeProducts} />
@@ -89,6 +89,16 @@ IndexPage.propTypes = {
             }),
             HomeVideo: PropTypes.shape({
               videoIframeUrl: PropTypes.string,
+            }),
+            HomeBigTextOnImage: PropTypes.shape({
+              backgroundImage: PropTypes.shape({
+                mediaItemUrl: PropTypes.string,
+              }),
+              textLines: PropTypes.arrayOf(
+                PropTypes.shape({
+                  textLine: PropTypes.string,
+                })
+              ),
             }),
             HomeProcess: PropTypes.shape({
               processHeaderBlock: PropTypes.shape({
@@ -251,6 +261,14 @@ export const query = graphql`
           }
           HomeVideo {
             videoIframeUrl
+          }
+          HomeBigTextOnImage {
+            backgroundImage {
+              mediaItemUrl
+            }
+            textLines {
+              textLine
+            }
           }
           HomeProcess {
             processSectionId
