@@ -101,13 +101,6 @@ IndexPage.propTypes = {
               ),
             }),
             HomeProcess: PropTypes.shape({
-              processHeaderBlock: PropTypes.shape({
-                processHeaderBlockCopy: PropTypes.string,
-                processHeaderBlockImage: PropTypes.shape({
-                  sourceUrl: PropTypes.string,
-                  altText: PropTypes.string,
-                }),
-              }),
               processHeading: PropTypes.string,
               processCopy: PropTypes.string,
               processColumns: PropTypes.arrayOf(
@@ -262,21 +255,6 @@ export const query = graphql`
           }
           HomeProcess {
             processSectionId
-            processHeaderBlock {
-              processHeaderBlockCopy
-              processHeaderBlockImage {
-                gatsbyImage(
-                  breakpoints: [376, 364]
-                  cropFocus: CENTER
-                  fit: COVER
-                  formats: [AUTO, WEBP, AVIF]
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  width: 376
-                )
-                altText
-              }
-            }
             processHeading
             processCopy
             processColumns {

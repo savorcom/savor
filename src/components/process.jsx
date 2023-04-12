@@ -4,43 +4,12 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-import arrows from '../images/arrows.svg';
-
 const Process = ({ data }) => {
-  const {
-    processHeaderBlock,
-    processHeading,
-    processCopy,
-    processColumns,
-    processSectionId,
-  } = data;
-  const processHeaderImg = getImage(processHeaderBlock.processHeaderBlockImage);
+  const { processHeading, processCopy, processColumns, processSectionId } =
+    data;
 
   return (
     <section className="process" id={processSectionId}>
-      <div className="process__header-block">
-        <div
-          className="process__header-block-copy"
-          dangerouslySetInnerHTML={{
-            __html: processHeaderBlock.processHeaderBlockCopy,
-          }}
-        />
-        <div className="process__header-block-image-wrapper">
-          <GatsbyImage
-            className="process__header-block-image"
-            image={processHeaderImg}
-            alt={processHeaderBlock.processHeaderBlockImage.altText}
-          />
-        </div>
-        <AnimationOnScroll
-          animateIn="animate__slideInDown"
-          duration={1}
-          animateOnce
-          className="process__header-block-arrows"
-        >
-          <img src={arrows} alt="" width="48" height="108" aria-hidden="true" />
-        </AnimationOnScroll>
-      </div>
       <h2 className="process__heading">{processHeading}</h2>
       <div
         className="process__copy"
@@ -79,13 +48,6 @@ const Process = ({ data }) => {
 Process.propTypes = {
   data: PropTypes.shape({
     processSectionId: PropTypes.string,
-    processHeaderBlock: PropTypes.shape({
-      processHeaderBlockCopy: PropTypes.string,
-      processHeaderBlockImage: PropTypes.shape({
-        gatsbyImage: PropTypes.shape({}),
-        altText: PropTypes.string,
-      }),
-    }),
     processHeading: PropTypes.string,
     processCopy: PropTypes.string,
     processColumns: PropTypes.arrayOf(
