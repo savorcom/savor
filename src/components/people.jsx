@@ -12,7 +12,6 @@ const People = ({ data }) => {
     peopleSubheading,
     peopleImage,
     peopleCopy,
-    peoplePrincipals,
     peopleEmployees,
     peopleSectionId,
   } = data;
@@ -33,36 +32,6 @@ const People = ({ data }) => {
       />
       <p className="people__copy">{peopleCopy}</p>
       <ul className="people__list">
-        {peoplePrincipals.map((item, index) => {
-          const principalImg = getImage(item.peoplePrincipalImage);
-          return (
-            <li key={item.peoplePrincipalName} className="people__item">
-              <AnimationOnScroll
-                animateIn="animate__fadeIn"
-                duration={1.25}
-                delay={index * 250}
-                animateOnce
-              >
-                <div className="people__item-image-wrapper">
-                  <GatsbyImage
-                    className="people__item-image"
-                    image={principalImg}
-                    alt={item.peoplePrincipalImage.altText}
-                  />
-                </div>
-                <p className="people__item-name">{item.peoplePrincipalName}</p>
-                <div
-                  className="people__item-title"
-                  dangerouslySetInnerHTML={{
-                    __html: item.peoplePrincipalTitle,
-                  }}
-                />
-              </AnimationOnScroll>
-            </li>
-          );
-        })}
-      </ul>
-      <ul className="people__list">
         {peopleEmployees.map((item, index) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
           return (
@@ -80,7 +49,7 @@ const People = ({ data }) => {
               <AnimationOnScroll
                 animateIn="animate__fadeIn"
                 duration={1.5}
-                delay={peoplePrincipals.length * 250 + index * 250}
+                delay={peopleEmployees.length * 250 + index * 250}
                 animateOnce
                 className="people__item-content-wrapper"
               >
@@ -114,13 +83,6 @@ People.propTypes = {
       altText: PropTypes.string,
     }),
     peopleCopy: PropTypes.string,
-    peoplePrincipals: PropTypes.arrayOf(
-      PropTypes.shape({
-        principalImage: PropTypes.shape({}),
-        principalName: PropTypes.string,
-        principalTitle: PropTypes.string,
-      })
-    ),
     peopleEmployees: PropTypes.arrayOf(
       PropTypes.shape({
         employeeImage: PropTypes.shape({}),

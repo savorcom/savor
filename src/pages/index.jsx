@@ -141,16 +141,6 @@ IndexPage.propTypes = {
                 altText: PropTypes.string,
               }),
               peopleCopy: PropTypes.string,
-              peoplePrincipals: PropTypes.arrayOf(
-                PropTypes.shape({
-                  peoplePrincipalImage: PropTypes.shape({
-                    sourceUrl: PropTypes.string,
-                    altText: PropTypes.string,
-                  }),
-                  peoplePrincipalName: PropTypes.string,
-                  peoplePrincipalTitle: PropTypes.string,
-                })
-              ),
               peopleEmployees: PropTypes.arrayOf(
                 PropTypes.shape({
                   peopleEmployeeImage: PropTypes.shape({
@@ -341,22 +331,6 @@ export const query = graphql`
               altText
             }
             peopleCopy
-            peoplePrincipals {
-              peoplePrincipalImage {
-                gatsbyImage(
-                  breakpoints: [376, 240]
-                  cropFocus: CENTER
-                  fit: COVER
-                  formats: [AUTO, WEBP, AVIF]
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  width: 376
-                )
-                altText
-              }
-              peoplePrincipalName
-              peoplePrincipalTitle
-            }
             peopleEmployees {
               peopleEmployeeImage {
                 gatsbyImage(
