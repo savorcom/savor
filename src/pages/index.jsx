@@ -6,30 +6,31 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 import Hero from '../components/hero';
-import Problem from '../components/problem';
 import Video from '../components/video';
+import Problem from '../components/problem';
+import BigTextOnImage from '../components/bigTextOnImage';
 import Process from '../components/process';
 import Products from '../components/products';
 import People from '../components/people';
 import Contact from '../components/contact';
 
-const IndexPage = ({ data }) =>
-  console.log('data:', data) || (
-    <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
-      <SEO title="Home" />
-      <Hero data={data.allWpPage.edges[0].node.HomeHero} />
-      <div className="container">
-        <Video
-          videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl}
-        />
-        <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
-        <Process data={data.allWpPage.edges[0].node.HomeProcess} />
-        <Products data={data.allWpPage.edges[0].node.HomeProducts} />
-        <People data={data.allWpPage.edges[0].node.HomePeople} />
-        <Contact data={data.allWpPage.edges[0].node.HomeContact} />
-      </div>
-    </Layout>
-  );
+const IndexPage = ({ data }) => (
+  <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
+    <SEO title="Home" />
+    <Hero data={data.allWpPage.edges[0].node.HomeHero} />
+    <Video videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl} />
+    <div className="container">
+      <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
+    </div>
+    <BigTextOnImage />
+    <div className="container">
+      <Process data={data.allWpPage.edges[0].node.HomeProcess} />
+      <Products data={data.allWpPage.edges[0].node.HomeProducts} />
+      <People data={data.allWpPage.edges[0].node.HomePeople} />
+      <Contact data={data.allWpPage.edges[0].node.HomeContact} />
+    </div>
+  </Layout>
+);
 
 IndexPage.propTypes = {
   data: PropTypes.shape({

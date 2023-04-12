@@ -1,0 +1,58 @@
+.big-text-on-image {
+  background-size: cover;
+  align-items: center;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+
+  &__text-wrapper {
+    p {
+      color: $white;
+      font-family: $font-serif-xlight-italic;
+      font-size: 2.5rem;
+      line-height: 1;
+      max-width: none;
+      text-align: center;
+
+      @include mq($S) {
+        font-size: 4rem;
+      }
+
+      @include mq($M) {
+        font-size: 6rem;
+      }
+
+      @include mq($L) {
+        font-size: 8rem;
+      }
+    }
+  }
+
+  .drip-border {
+    bottom: -2px;
+    height: 1.67rem;
+    left: 0;
+    position: absolute;
+    width: 32rem;
+
+    @include mq($S) {
+      height: 2.5rem;
+      width: 48rem;
+    }
+
+    @include mq($M) {
+      height: 4rem;
+      width: 75rem;
+    }
+
+    @include mq($XL) {
+      bottom: 0;
+      height: 8.25rem;
+      left: -0.5rem;
+      width: 162rem;
+    }
+  }
+}
