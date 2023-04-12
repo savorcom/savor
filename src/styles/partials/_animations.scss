@@ -17,34 +17,3 @@
   animation-name: fadeInAndGrow;
   transform-origin: bottom center;
 }
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.slideUp {
-  animation-name: slideUp;
-  animation-delay: 0.25s;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.slideDown {
-  animation-name: slideDown;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
