@@ -199,9 +199,6 @@ export const query = graphql`
               )
               altText
             }
-            marquee {
-              marqueeItem
-            }
           }
           HomeProblem {
             problemSectionId
