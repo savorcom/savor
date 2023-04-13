@@ -32,6 +32,13 @@
 }
 
 @font-face {
+  font-family: 'Restora-Bold';
+  font-style: normal;
+  src: url('RestoraBold.woff2') format('woff2'),
+    url('RestoraBold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Restora-Light';
   font-style: normal;
   src: url('RestoraLight.woff2') format('woff2'),

@@ -265,7 +265,7 @@ export const query = graphql`
                   formats: [AUTO, WEBP, AVIF]
                   layout: FULL_WIDTH
                   placeholder: BLURRED
-                  width: 130
+                  width: 260
                 )
                 altText
               }

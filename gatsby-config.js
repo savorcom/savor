@@ -45,6 +45,7 @@ module.exports = {
             'PTSans-Bold',
             'Restora-Regular',
             'Restora-Italic',
+            'Restora-Bold',
             'Restora-Light',
             'Restora-ExtraLight-Italic',
           ],

@@ -13,10 +13,17 @@
 
   &__copy {
     margin-bottom: $space-600;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 25rem;
-    text-align: center;
+
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      strong {
+        font-family: $font-serif-bold;
+        font-size: 1.5rem;
+      }
+    }
   }
 
   &__columns {
@@ -31,7 +38,7 @@
 
     @include mq($L) {
       flex-direction: row;
-      gap: $space-600;
+      gap: $space-800;
       max-width: 60rem;
       padding-bottom: $space-800;
     }
@@ -41,11 +48,31 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: $space-300;
+    gap: $space-500;
+    line-height: 1.25;
+
+    &:nth-of-type(2) {
+      .process__column-icon {
+        width: 11rem;
+      }
+    }
 
     &-icon {
-      height: 8rem;
-      width: 8.125rem;
+      width: 8rem;
+    }
+
+    &-copy {
+      font-size: 0.875rem;
+      text-align: center;
+
+      p + * {
+        margin-top: $space-300;
+      }
+
+      span {
+        font-family: $font-serif-reg;
+        font-size: 1.25rem;
+      }
     }
   }
 }
