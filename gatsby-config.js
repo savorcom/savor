@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        url: 'http://34.215.58.117/graphql/',
+        url: 'https://7vr.3c1.myftpupload.com/graphql/',
         schema: {
           requestConcurrency: 10,
           timeout: 90000,
