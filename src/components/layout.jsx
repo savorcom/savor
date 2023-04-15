@@ -5,10 +5,11 @@ import Helmet from 'react-helmet';
 import '../styles/main.scss';
 import 'animate.css/animate.min.css';
 
+import HeroVideo from './heroVideo';
 import Header from './header';
 import Drip from './drip';
 
-const Layout = ({ children, menuItems }) => (
+const Layout = ({ children, menuItems, videoUrl }) => (
   <Fragment>
     <Helmet
       bodyAttributes={{
@@ -18,6 +19,7 @@ const Layout = ({ children, menuItems }) => (
     <a className="skip-link" href="#main">
       skip to main content
     </a>
+    <HeroVideo videoUrl={videoUrl} />
     <Drip />
     <Header menuItems={menuItems} />
     <main className="main" id="main" role="main">
@@ -34,6 +36,7 @@ Layout.propTypes = {
       path: PropTypes.string,
     })
   ).isRequired,
+  videoUrl: PropTypes.string.isRequired,
 };
 
 export default Layout;

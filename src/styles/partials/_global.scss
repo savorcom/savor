@@ -141,6 +141,10 @@ p:has(small) {
   }
 }
 
+.content-wrapper {
+  background-color: $beige;
+}
+
 .container {
   padding: 0 $space-500;
   margin-left: auto;

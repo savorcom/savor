@@ -1,8 +1,39 @@
 .hero {
   margin-bottom: $space-600;
+  position: relative;
 
   @include mq($L) {
-    margin-bottom: $space-550;
+    margin-bottom: $space-700;
+  }
+
+  &__video {
+    position: absolute;
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.5);
+      bottom: 0;
+      content: '';
+      height: 100vh;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      z-index: -1;
+    }
+
+    &-video {
+      bottom: 0;
+      height: 100vh;
+      left: 0;
+      object-fit: cover;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      z-index: -1;
+    }
   }
 
   &__content-wrapper {
@@ -32,11 +63,21 @@
     width: 100%;
   }
 
-  &__copy {
-    margin-bottom: $space-600;
+  &__content {
+    color: $white;
+  }
 
-    @include mq($M) {
-      margin-bottom: 0;
+  &__copy {
+    p {
+      font-size: 1.25rem;
+
+      @include mq($M) {
+        font-size: 1.5rem;
+      }
+
+      @include mq($L) {
+        font-size: 2rem;
+      }
     }
   }
 }

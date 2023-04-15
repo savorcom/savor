@@ -15,19 +15,24 @@ import People from '../components/people';
 import Contact from '../components/contact';
 
 const IndexPage = ({ data }) => (
-  <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
+  <Layout
+    menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}
+    videoUrl={data.allWpPage.edges[0].node.HomeHero.heroVideo.mediaItemUrl}
+  >
     <SEO title="Home" />
     <Hero data={data.allWpPage.edges[0].node.HomeHero} />
-    <Video videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl} />
-    <div className="container">
-      <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
-    </div>
-    <BigTextOnImage data={data.allWpPage.edges[0].node.HomeBigTextOnImage} />
-    <div className="container">
-      <Process data={data.allWpPage.edges[0].node.HomeProcess} />
-      <Products data={data.allWpPage.edges[0].node.HomeProducts} />
-      <People data={data.allWpPage.edges[0].node.HomePeople} />
-      <Contact data={data.allWpPage.edges[0].node.HomeContact} />
+    <div className="content-wrapper">
+      <Video videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl} />
+      <div className="container">
+        <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
+      </div>
+      <BigTextOnImage data={data.allWpPage.edges[0].node.HomeBigTextOnImage} />
+      <div className="container">
+        <Process data={data.allWpPage.edges[0].node.HomeProcess} />
+        <Products data={data.allWpPage.edges[0].node.HomeProducts} />
+        <People data={data.allWpPage.edges[0].node.HomePeople} />
+        <Contact data={data.allWpPage.edges[0].node.HomeContact} />
+      </div>
     </div>
   </Layout>
 );
@@ -55,12 +60,11 @@ IndexPage.propTypes = {
         PropTypes.shape({
           node: PropTypes.shape({
             HomeHero: PropTypes.shape({
+              heroVideo: PropTypes.shape({
+                mediaItemUrl: PropTypes.string,
+              }),
               heroHeading: PropTypes.string,
               heroCopy: PropTypes.string,
-              heroImage: PropTypes.shape({
-                gatsbyImage: PropTypes.shape({}),
-                altText: PropTypes.string,
-              }),
             }),
             HomeProblem: PropTypes.shape({
               problemImage: PropTypes.shape({
@@ -179,20 +183,11 @@ export const query = graphql`
       edges {
         node {
           HomeHero {
+            heroVideo {
+              mediaItemUrl
+            }
             heroHeading
             heroCopy
-            heroImage {
-              gatsbyImage(
-                breakpoints: [376, 460, 600]
-                cropFocus: CENTER
-                fit: COVER
-                formats: [AUTO, WEBP, AVIF]
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                width: 600
-              )
-              altText
-            }
           }
           HomeProblem {
             problemSectionId

@@ -1,15 +1,15 @@
 .contact {
-  margin-bottom: $space-400;
+  padding-bottom: $space-400;
   position: relative;
 
   @include mq($L) {
     display: flex;
     justify-content: center;
-    margin-bottom: $space-800;
+    padding-bottom: $space-800;
   }
 
   @include mq($XL) {
-    margin-bottom: $space-850;
+    padding-bottom: $space-850;
   }
 
   &__columns {
@@ -50,14 +50,13 @@
     max-width: 70rem;
 
     @include mq($L) {
-      bottom: -$space-500;
+      bottom: $space-500;
       position: absolute;
       width: 100%;
-      z-index: -1;
     }
 
     @include mq($XL) {
-      bottom: -$space-600;
+      bottom: $space-800;
     }
   }
 }
