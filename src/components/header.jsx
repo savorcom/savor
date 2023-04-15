@@ -29,6 +29,7 @@ const Header = ({ menuItems }) => {
     <header className="header" role="banner">
       <div className="container">
         <AnchorLink className="header__logo-link" href="#savor">
+          <h1 className="visuallyhidden">Savor</h1>
           <SavorLogo className="header__logo" />
         </AnchorLink>
 
