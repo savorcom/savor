@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import heroVideoFile from '../images/butter.mp4';
 
-const heroVideo = ({ videoUrl }) => (
+// TODO: remove local video file when production-ready
+const heroVideo = (/* {videoUrl} */) => (
   <div className="hero__video">
     <div className="iframe-container iframe-container-16x9">
       <video className="hero__video-video" muted autoPlay loop>
