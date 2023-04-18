@@ -2,16 +2,16 @@
 // ==== HEADER
 // ===========================================================================
 .header {
-  margin-bottom: $space-800;
+  margin-bottom: $space-900;
   padding-top: $space-600;
   position: relative;
   transition: background-image 0.3s ease-out;
   width: 100%;
 
   @include mq($L) {
-    margin-bottom: $space-900;
+    margin-bottom: $space-1000;
+    padding-top: $space-550;
     padding-bottom: $space-200;
-    padding-top: $space-300;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -35,7 +35,7 @@
   }
 
   @include mq($XL) {
-    padding-top: $space-400;
+    padding-top: $space-700;
   }
 
   &__background {
@@ -81,14 +81,6 @@
 
       &:focus-visible {
         border-bottom: 1px solid $white;
-      }
-
-      @include mq($L) {
-        margin-left: $space-700;
-      }
-
-      @include mq($XL) {
-        margin-left: $space-850;
       }
     }
   }

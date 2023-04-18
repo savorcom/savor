@@ -1,5 +1,5 @@
 .hero {
-  margin-bottom: $space-600;
+  margin-bottom: $space-500;
   position: relative;
 
   @include mq($L) {
@@ -10,7 +10,7 @@
     position: absolute;
 
     &::after {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.75);
       bottom: 0;
       content: '';
       height: 100vh;
@@ -37,7 +37,16 @@
   }
 
   &__content-wrapper {
-    margin-bottom: $space-600;
+    margin-bottom: $space-550;
+
+    @include mq($M) {
+      margin-bottom: $space-600;
+    }
+
+    @include mq($XL) {
+      margin-bottom: $space-600;
+      max-width: 1440px;
+    }
   }
 
   &__wrapper {
@@ -47,8 +56,7 @@
       flex-direction: row-reverse;
       justify-content: center;
       max-width: 60rem;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 9rem;
 
       > * {
         flex: 1;
@@ -67,16 +75,46 @@
     color: $white;
   }
 
-  &__copy {
-    p {
-      font-size: 1.25rem;
+  &__heading {
+    margin-bottom: $space-300;
+
+    @include mq($M) {
+      margin-bottom: $space-550;
+    }
+
+    h1 {
+      font-size: 3rem;
 
       @include mq($M) {
-        font-size: 1.5rem;
+        font-size: 5rem;
       }
 
       @include mq($XL) {
-        font-size: 1.875rem;
+        font-size: 6rem;
+      }
+    }
+  }
+
+  &__copy {
+    margin-left: $space-300;
+    max-width: 32.5rem;
+
+    @include mq($XL) {
+      margin-left: $space-550;
+    }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.2;
+      max-width: none;
+      text-wrap: balance;
+
+      @include mq($M) {
+        font-size: 1.25rem;
+      }
+
+      @include mq($XL) {
+        font-size: 1.375rem;
       }
     }
   }
