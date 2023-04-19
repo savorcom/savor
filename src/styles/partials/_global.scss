@@ -176,3 +176,17 @@ p:has(small) {
     margin-right: auto;
   }
 }
+
+.bottom-content {
+  margin-top: -22rem;
+  position: relative;
+  z-index: 1;
+
+  @include mq($XL) {
+    margin-top: -15rem;
+  }
+
+  @include mq($XXL) {
+    margin-top: -12rem;
+  }
+}

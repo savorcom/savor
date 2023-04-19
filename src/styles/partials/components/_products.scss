@@ -4,17 +4,46 @@
     rgb(223, 154, 100),
     rgb(156, 126, 82)
   );
-  padding-bottom: $space-600;
-  padding-top: $space-600;
+  padding-bottom: 28rem;
+  padding-top: 15rem;
+  position: relative;
 
-  @include mq($L) {
-    padding-bottom: $space-700;
-    padding-top: $space-700;
+  @include mq($M) {
+    padding-bottom: 29rem;
+    padding-top: 16rem;
   }
 
   @include mq($XL) {
-    padding-bottom: $space-850;
-    padding-top: $space-800;
+    padding-bottom: 30rem;
+    padding-top: 17rem;
+  }
+
+  &::before {
+    background-image: url('/products-curve-top.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 260px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &::after {
+    background-image: url('/products-curve-bottom.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 530px;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 
   &__heading {

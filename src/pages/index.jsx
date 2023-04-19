@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => (
         <Process data={data.allWpPage.edges[0].node.HomeProcess} />
       </div>
       <Products data={data.allWpPage.edges[0].node.HomeProducts} />
-      <div className="container">
+      <div className="container bottom-content">
         <People data={data.allWpPage.edges[0].node.HomePeople} />
         <Contact data={data.allWpPage.edges[0].node.HomeContact} />
       </div>
