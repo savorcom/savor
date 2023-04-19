@@ -15,10 +15,7 @@ import People from '../components/people';
 import Contact from '../components/contact';
 
 const IndexPage = ({ data }) => (
-  <Layout
-    menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}
-    videoUrl={data.allWpPage.edges[0].node.HomeHero.heroVideo.mediaItemUrl}
-  >
+  <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
     <SEO title="Home" />
     <Hero data={data.allWpPage.edges[0].node.HomeHero} />
     <div className="content-wrapper">
@@ -62,9 +59,6 @@ IndexPage.propTypes = {
         PropTypes.shape({
           node: PropTypes.shape({
             HomeHero: PropTypes.shape({
-              heroVideo: PropTypes.shape({
-                mediaItemUrl: PropTypes.string,
-              }),
               heroHeading: PropTypes.string,
               heroCopy: PropTypes.string,
             }),
@@ -165,9 +159,6 @@ export const query = graphql`
       edges {
         node {
           HomeHero {
-            heroVideo {
-              mediaItemUrl
-            }
             heroHeading
             heroCopy
           }

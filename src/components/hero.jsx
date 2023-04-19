@@ -6,7 +6,7 @@ const Hero = ({ data }) => {
 
   return (
     <section className="hero">
-      <div className="hero__content-wrapper">
+      <div className="container hero__content-wrapper">
         <div className="hero__wrapper">
           <div className="hero__content">
             <div

@@ -1,33 +1,24 @@
 .hero {
   margin-bottom: $space-500;
-  margin-left: $space-300;
   position: relative;
-
-  @include mq($M) {
-    margin-left: $space-500;
-  }
 
   @include mq($L) {
     margin-bottom: $space-700;
   }
 
-  &__video {
+  &__image {
     position: absolute;
 
-    &-video {
+    &-image {
       bottom: 0;
       height: 100vh;
       left: 0;
       object-fit: cover;
       position: fixed;
       right: 0;
-      top: 2rem;
+      top: 0;
       width: 100vw;
       z-index: -1;
-
-      @include mq($XL) {
-        top: 6rem;
-      }
     }
   }
 
@@ -40,7 +31,7 @@
 
     @include mq($XL) {
       margin-bottom: 15rem;
-      max-width: 1440px;
+      max-width: 1480px;
     }
   }
 
