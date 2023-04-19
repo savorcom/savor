@@ -4,10 +4,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Savor`,
-    description: `SITE META DESCRIPTION GOES HERE.`,
+    title: `Savor: Zero-Carbon Fats`,
+    description: `Craveworthy and sustainable fats that sizzle, spread, and taste the way they should. Farm-free lipids for plant-based butter, milk, cheese, meat and more.`,
     siteUrl: `https://savor-it.com`,
-    socialImage: `ABSOLUTE PATH TO IMAGE IN STATIC FOLDER`,
+    socialImage: `/savor-social-image.jpg`,
   },
   trailingSlash: 'never',
   plugins: [
