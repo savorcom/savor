@@ -5,16 +5,11 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Process = ({ data }) => {
-  const { processHeading, processCopy, processColumns, processSectionId } =
-    data;
+  const { processHeading, processColumns, processSectionId } = data;
 
   return (
     <section className="process" id={processSectionId}>
       <h2 className="process__heading">{processHeading}</h2>
-      <div
-        className="process__copy"
-        dangerouslySetInnerHTML={{ __html: processCopy }}
-      />
       <div className="process__columns">
         {processColumns.map((item, index) => {
           const processColIcon = getImage(item.processColumnIcon);
@@ -49,7 +44,6 @@ Process.propTypes = {
   data: PropTypes.shape({
     processSectionId: PropTypes.string,
     processHeading: PropTypes.string,
-    processCopy: PropTypes.string,
     processColumns: PropTypes.arrayOf(
       PropTypes.shape({
         processColumnIcon: PropTypes.shape({

@@ -2,22 +2,18 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: $space-600;
+  margin-bottom: $space-550;
+  margin-top: $space-600;
   max-width: 73.75rem;
 
   @include mq($L) {
-    margin-bottom: $space-700;
+    margin-bottom: $space-500;
+    margin-top: $space-700;
   }
 
-  &__image {
-    &-wrapper {
-      margin-bottom: $space-400;
-      width: 100%;
-
-      @include mq($M) {
-        margin-bottom: $space-600;
-      }
-    }
+  @include mq($XL) {
+    margin-bottom: $space-600;
+    margin-top: $space-800;
   }
 
   &__heading {
@@ -25,14 +21,14 @@
     text-align: center;
 
     @include mq($M) {
-      margin-bottom: $space-600;
+      margin-bottom: $space-800;
     }
   }
 
   &__columns {
     display: flex;
     flex-direction: column;
-    gap: $space-600;
+    gap: $space-400;
 
     @include mq($M) {
       flex-direction: row;
@@ -40,19 +36,11 @@
 
     @include mq($L) {
       flex-direction: row;
-      gap: $space-400;
+      gap: $space-800;
       max-width: 60rem;
 
-      > div:first-child {
-        flex-basis: 45%;
-      }
-
-      > div:last-child {
-        padding-left: $space-700;
-
-        .problem__column-icon {
-          width: 40%;
-        }
+      > div {
+        flex-basis: 50%;
       }
     }
   }
@@ -61,12 +49,19 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: $space-400;
 
     &-heading {
+      color: $copper;
+      font-family: $font-serif-reg;
+      font-size: 1.5rem;
+      font-weight: 500;
       margin-bottom: $space-300;
+      text-wrap: balance;
     }
 
     &-copy {
+      line-height: 1.33;
       margin-bottom: $space-500;
 
       @include mq($L) {

@@ -1,13 +1,15 @@
 .people {
   margin-bottom: $space-700;
+  margin-top: $space-700;
   max-width: 73.75rem;
 
   @include mq($L) {
     margin-bottom: $space-800;
+    margin-top: $space-800;
   }
 
   &__heading {
-    margin-bottom: $space-600;
+    margin-bottom: $space-550;
     text-align: center;
   }
 
@@ -21,12 +23,11 @@
     text-align: center;
 
     @include mq($M) {
-      font-size: 2.75rem;
       margin-bottom: $space-550;
     }
 
-    @include mq($XL) {
-      font-size: 3rem;
+    @include mq($L) {
+      margin-bottom: $space-800;
     }
   }
 
@@ -69,22 +70,22 @@
     flex-direction: column;
 
     @include mq($L) {
-      &:nth-of-type(7n + 2) {
-        grid-column: span 4;
-      }
-
-      &:nth-of-type(7n + 4),
-      &:nth-of-type(7n + 5),
-      &:nth-of-type(7n + 6),
-      &:nth-of-type(7n + 7) {
+      &:nth-of-type(7n + 1),
+      &:nth-of-type(7n + 2),
+      &:nth-of-type(7n + 3),
+      &:nth-of-type(7n + 4) {
         grid-column: span 3;
       }
 
-      &:nth-of-type(7n + 1) {
+      &:nth-of-type(7n + 6) {
+        grid-column: span 4;
+      }
+
+      &:nth-of-type(7n + 5) {
         grid-column: 3 / 5;
       }
 
-      &:nth-of-type(7n + 3) {
+      &:nth-of-type(7n + 7) {
         grid-column: 9 / 11;
       }
     }

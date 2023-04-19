@@ -29,7 +29,9 @@ const IndexPage = ({ data }) => (
       <BigTextOnImage data={data.allWpPage.edges[0].node.HomeBigTextOnImage} />
       <div className="container">
         <Process data={data.allWpPage.edges[0].node.HomeProcess} />
-        <Products data={data.allWpPage.edges[0].node.HomeProducts} />
+      </div>
+      <Products data={data.allWpPage.edges[0].node.HomeProducts} />
+      <div className="container">
         <People data={data.allWpPage.edges[0].node.HomePeople} />
         <Contact data={data.allWpPage.edges[0].node.HomeContact} />
       </div>
@@ -67,28 +69,14 @@ IndexPage.propTypes = {
               heroCopy: PropTypes.string,
             }),
             HomeProblem: PropTypes.shape({
-              problemImage: PropTypes.shape({
-                gatsbyImage: PropTypes.shape({}),
-                altText: PropTypes.string,
-              }),
               problemHeading: PropTypes.string,
               leftColumn: PropTypes.shape({
                 problemLeftColumnHeading: PropTypes.string,
                 problemLeftColumnCopy: PropTypes.string,
-                problemLeftColumnIcon: PropTypes.shape({
-                  sourceUrl: PropTypes.string,
-                  altText: PropTypes.string,
-                }),
-                problemLeftColumnIconText: PropTypes.string,
               }),
               rightColumn: PropTypes.shape({
                 problemRightColumnHeading: PropTypes.string,
                 problemRightColumnCopy: PropTypes.string,
-                problemRightColumnIcon: PropTypes.shape({
-                  sourceUrl: PropTypes.string,
-                  altText: PropTypes.string,
-                }),
-                problemRightColumnIconText: PropTypes.string,
               }),
             }),
             HomeVideo: PropTypes.shape({
@@ -106,7 +94,6 @@ IndexPage.propTypes = {
             }),
             HomeProcess: PropTypes.shape({
               processHeading: PropTypes.string,
-              processCopy: PropTypes.string,
               processColumns: PropTypes.arrayOf(
                 PropTypes.shape({
                   processColumnIcon: PropTypes.shape({
@@ -133,11 +120,6 @@ IndexPage.propTypes = {
             HomePeople: PropTypes.shape({
               peopleHeading: PropTypes.string,
               peopleSubheading: PropTypes.string,
-              peopleImage: PropTypes.shape({
-                sourceUrl: PropTypes.string,
-                altText: PropTypes.string,
-              }),
-              peopleCopy: PropTypes.string,
               peopleEmployees: PropTypes.arrayOf(
                 PropTypes.shape({
                   peopleEmployeeImage: PropTypes.shape({
@@ -191,50 +173,14 @@ export const query = graphql`
           }
           HomeProblem {
             problemSectionId
-            problemImage {
-              gatsbyImage(
-                breakpoints: [376, 769, 1200]
-                cropFocus: CENTER
-                fit: COVER
-                formats: [AUTO, WEBP, AVIF]
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                width: 1200
-              )
-              altText
-            }
             problemHeading
             leftColumn {
               problemLeftColumnHeading
               problemLeftColumnCopy
-              problemLeftColumnIcon {
-                gatsbyImage(
-                  cropFocus: CENTER
-                  fit: COVER
-                  formats: [AUTO, WEBP, AVIF]
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  width: 280
-                )
-                altText
-              }
-              problemLeftColumnIconText
             }
             rightColumn {
               problemRightColumnHeading
               problemRightColumnCopy
-              problemRightColumnIcon {
-                gatsbyImage(
-                  cropFocus: CENTER
-                  fit: COVER
-                  formats: [AUTO, WEBP, AVIF]
-                  layout: FULL_WIDTH
-                  placeholder: BLURRED
-                  width: 280
-                )
-                altText
-              }
-              problemRightColumnIconText
             }
           }
           HomeVideo {
@@ -251,7 +197,6 @@ export const query = graphql`
           HomeProcess {
             processSectionId
             processHeading
-            processCopy
             processColumns {
               processColumnIcon {
                 gatsbyImage(
@@ -291,19 +236,6 @@ export const query = graphql`
             peopleSectionId
             peopleHeading
             peopleSubheading
-            peopleImage {
-              gatsbyImage(
-                breakpoints: [376, 800]
-                cropFocus: CENTER
-                fit: COVER
-                formats: [AUTO, WEBP, AVIF]
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                width: 800
-              )
-              altText
-            }
-            peopleCopy
             peopleEmployees {
               peopleEmployeeImage {
                 gatsbyImage(

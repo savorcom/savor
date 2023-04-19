@@ -18,7 +18,7 @@ const BigTextOnImage = ({ data }) => {
           <AnimationOnScroll
             animateIn="animate__fadeInUp"
             delay={index * 500}
-            duration={2}
+            duration={1}
             animateOnce
             key={line.textLine}
           >

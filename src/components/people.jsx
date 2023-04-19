@@ -7,16 +7,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useWindowSize } from '../hooks/useWindowSize';
 
 const People = ({ data }) => {
-  const {
-    peopleHeading,
-    peopleSubheading,
-    peopleImage,
-    peopleCopy,
-    peopleEmployees,
-    peopleSectionId,
-  } = data;
-  const peopleImg = getImage(peopleImage);
-
+  const { peopleHeading, peopleSubheading, peopleEmployees, peopleSectionId } =
+    data;
   const size = useWindowSize();
   const isSmallBreakpoint = size.width >= 480;
   const isMediumBreakpoint = size.width >= 768;
@@ -25,12 +17,6 @@ const People = ({ data }) => {
     <section className="people" id={peopleSectionId}>
       <h2 className="people__heading">{peopleHeading}</h2>
       <p className="people__subheading">{peopleSubheading}</p>
-      <GatsbyImage
-        className="people__image"
-        image={peopleImg}
-        alt={peopleImage.altText}
-      />
-      <p className="people__copy">{peopleCopy}</p>
       <ul className="people__list">
         {peopleEmployees.map((item, index) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
@@ -48,8 +34,8 @@ const People = ({ data }) => {
             >
               <AnimationOnScroll
                 animateIn="animate__fadeIn"
-                duration={1.5}
-                delay={peopleEmployees.length * 250 + index * 250}
+                duration={1}
+                delay={peopleEmployees.length * 125 + index * 250}
                 animateOnce
                 className="people__item-content-wrapper"
               >
@@ -79,10 +65,6 @@ People.propTypes = {
     peopleSectionId: PropTypes.string,
     peopleHeading: PropTypes.string,
     peopleSubheading: PropTypes.string,
-    peopleImage: PropTypes.shape({
-      altText: PropTypes.string,
-    }),
-    peopleCopy: PropTypes.string,
     peopleEmployees: PropTypes.arrayOf(
       PropTypes.shape({
         employeeImage: PropTypes.shape({}),

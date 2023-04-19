@@ -8,34 +8,36 @@ const Products = ({ data }) => {
 
   return (
     <section className="products" id={productsSectionId}>
-      <h2 className="products__heading">{productsHeading}</h2>
-      <div
-        className="products__copy"
-        dangerouslySetInnerHTML={{ __html: productsCopy }}
-      />
-      <ul className="products__list">
-        {products.map((item, index) => {
-          const productImg = getImage(item.productImage);
-          return (
-            <li key={item.productTitle} className="products__item">
-              <AnimationOnScroll
-                animateIn="animate__fadeInUp"
-                duration={1.25}
-                delay={index * 250}
-                animateOnce
-                className="products__item-wrapper"
-              >
-                <GatsbyImage
-                  className="products__image"
-                  image={productImg}
-                  alt={item.productImage.altText}
-                />
-                <p className="products__title">{item.productTitle}</p>
-              </AnimationOnScroll>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="container">
+        <h2 className="products__heading">{productsHeading}</h2>
+        <div
+          className="products__copy"
+          dangerouslySetInnerHTML={{ __html: productsCopy }}
+        />
+        <ul className="products__list">
+          {products.map((item, index) => {
+            const productImg = getImage(item.productImage);
+            return (
+              <li key={item.productTitle} className="products__item">
+                <AnimationOnScroll
+                  animateIn="animate__fadeInUp"
+                  duration={1}
+                  delay={index * 125}
+                  animateOnce
+                  className="products__item-wrapper"
+                >
+                  <GatsbyImage
+                    className="products__image"
+                    image={productImg}
+                    alt={item.productImage.altText}
+                  />
+                  <p className="products__title">{item.productTitle}</p>
+                </AnimationOnScroll>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 };
