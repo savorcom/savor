@@ -17,7 +17,7 @@ const Header = ({ menuItems }) => {
     window.addEventListener('scroll', () => {
       scrollPos = window.scrollY;
 
-      if (scrollPos >= 1) {
+      if (scrollPos >= 220) {
         addClassOnScroll();
       } else {
         removeClassOnScroll();

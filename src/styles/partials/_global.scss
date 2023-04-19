@@ -3,6 +3,7 @@
 // ===========================================================================
 body {
   background: $bg-clr;
+  background: #050505;
   border-bottom: 12px solid $black;
   font-family: $font-sans-reg;
   width: 100%;
@@ -17,6 +18,20 @@ body {
 
   @include mq($XXL) {
     border-bottom: 36px solid $black;
+  }
+
+  &::after {
+    background-color: rgba(0, 0, 0, 0.33);
+    bottom: 0;
+    content: '';
+    height: 200%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
   }
 }
 

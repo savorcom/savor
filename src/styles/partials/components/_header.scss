@@ -2,14 +2,16 @@
 // ==== HEADER
 // ===========================================================================
 .header {
-  margin-bottom: $space-900;
-  padding-top: $space-600;
+  margin-bottom: $space-600;
+  padding-top: $space-550;
   position: relative;
-  transition: background-image 0.3s ease-out;
+  transition: padding-top 0.3s ease-out;
   width: 100%;
 
+  @include mq($M) {
+    margin-bottom: $space-850;
+  }
   @include mq($L) {
-    margin-bottom: $space-1000;
     padding-top: $space-550;
     padding-bottom: $space-200;
     position: sticky;
@@ -29,16 +31,21 @@
       position: absolute;
       right: 0;
       top: 0;
-      transition: opacity 1.5s ease-out;
+      transition: opacity 0.5s ease-out;
       z-index: -1;
     }
   }
 
   @include mq($XL) {
+    margin-bottom: $space-1000;
     padding-top: $space-700;
   }
 
   &__background {
+    @include mq($XL) {
+      padding-top: 1.25rem;
+    }
+
     &::before {
       opacity: 0.975;
     }
@@ -115,7 +122,6 @@
   &__link {
     color: $white;
     font-family: $font-sans-bold;
-    font-size: 1.5rem;
     outline: none;
     text-decoration: none;
 
