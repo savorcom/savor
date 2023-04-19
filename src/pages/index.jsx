@@ -16,7 +16,7 @@ import Contact from '../components/contact';
 
 const IndexPage = ({ data }) => (
   <Layout menuItems={data.allWpMenu.edges[0].node.menuItems.nodes}>
-    <SEO title="Home" />
+    <SEO title="" />
     <Hero data={data.allWpPage.edges[0].node.HomeHero} />
     <div className="content-wrapper">
       <Video videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl} />
