@@ -19,6 +19,19 @@
       top: 0;
       width: 100vw;
       z-index: -1;
+
+      @include mq($L) {
+        bottom: 0;
+        height: auto;
+        left: 0;
+        max-width: none;
+        object-fit: none;
+        position: fixed;
+        right: 0;
+        top: -8rem;
+        width: 118vw;
+        z-index: -1;
+      }
     }
   }
 
