@@ -1,6 +1,12 @@
 .hero {
   margin-bottom: $space-500;
+  margin-top: $space-600;
   position: relative;
+
+  @include mq($M) {
+    margin-bottom: $space-700;
+    margin-top: $space-800;
+  }
 
   @include mq($L) {
     margin-bottom: $space-700;
@@ -11,27 +17,15 @@
     position: absolute;
 
     &-image {
-      bottom: 0;
       height: 100vh;
-      left: 0;
-      object-fit: cover;
-      position: fixed;
-      right: 0;
       top: 0;
       width: 100vw;
       z-index: -1;
 
       @include mq($L) {
-        bottom: 0;
         height: auto;
-        left: 0;
-        max-width: none;
-        object-fit: none;
-        position: fixed;
-        right: 0;
         top: -8rem;
         width: 118vw;
-        z-index: -1;
       }
     }
   }

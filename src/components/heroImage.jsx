@@ -1,23 +1,19 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import heroImage from '../images/hero-image.jpg';
+const HeroImage = ({ heroImage }) => {
+  const image = getImage(heroImage);
 
-const HeroImage = () => (
-  <div className="hero__image">
-    <img
-      className="hero__image-image"
-      src={heroImage}
-      alt=""
-      width="1920"
-      height="1280"
-      decoding="async"
-    />
-  </div>
-);
+  return (
+    <div className="hero__image">
+      <GatsbyImage className="hero__image-image" image={image} alt="" />
+    </div>
+  );
+};
 
-HeroImage.propTypes = {};
-
-HeroImage.defaultProps = {};
+HeroImage.propTypes = {
+  heroImage: PropTypes.shape({}).isRequired,
+};
 
 export default HeroImage;

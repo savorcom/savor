@@ -9,7 +9,7 @@ import HeroImage from './heroImage';
 import Header from './header';
 import Drip from './drip';
 
-const Layout = ({ children, menuItems }) => (
+const Layout = ({ children, heroImage, menuItems }) => (
   <Fragment>
     <Helmet
       bodyAttributes={{
@@ -19,7 +19,7 @@ const Layout = ({ children, menuItems }) => (
     <a className="skip-link" href="#main">
       skip to main content
     </a>
-    <HeroImage />
+    <HeroImage heroImage={heroImage} />
     <Drip />
     <Header menuItems={menuItems} />
     <main className="main" id="main" role="main">
@@ -30,6 +30,7 @@ const Layout = ({ children, menuItems }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  heroImage: PropTypes.shape({}).isRequired,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string,
