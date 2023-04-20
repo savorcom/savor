@@ -4,6 +4,7 @@
 
   @include mq($L) {
     margin-bottom: $space-700;
+    margin-top: $space-900;
   }
 
   &__image {

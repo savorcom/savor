@@ -37,6 +37,7 @@
     @include mq($L) {
       flex-direction: row;
       gap: $space-800;
+      justify-content: center;
       max-width: 60rem;
     }
   }
@@ -60,6 +61,7 @@
 
     &-copy {
       font-size: 0.875rem;
+      max-width: 22rem;
       text-align: center;
 
       h3 {

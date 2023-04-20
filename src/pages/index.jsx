@@ -246,12 +246,9 @@ export const query = graphql`
           }
           HomeContact {
             contactSectionId
-            columns {
-              contactColumnHeading
-              contactColumnCopy
-              contactColumnButtonText
-              buttonType
-            }
+            contactColumnHeading
+            contactColumnCopy
+            contactColumnButtonText
           }
         }
       }

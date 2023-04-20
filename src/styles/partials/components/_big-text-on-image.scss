@@ -4,9 +4,16 @@
   aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
+  padding-bottom: 9rem;
+  padding-top: 9rem;
   position: relative;
   width: 100%;
+
+  @include mq($M) {
+    padding-bottom: 18rem;
+    padding-top: 18rem;
+  }
 
   &__text-wrapper {
     p {

@@ -159,13 +159,8 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.13636364;
-
-  @include mq($XL) {
-    font-size: 1.75rem;
-    line-height: 1.25;
-  }
 }
 
 blockquote {

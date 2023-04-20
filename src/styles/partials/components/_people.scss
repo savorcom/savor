@@ -82,6 +82,16 @@
       }
 
       &:nth-of-type(7n + 5) {
+        grid-column: 2 / 5;
+      }
+
+      &:nth-of-type(7n + 7) {
+        grid-column: 9 / 12;
+      }
+    }
+
+    @include mq($XL) {
+      &:nth-of-type(7n + 5) {
         grid-column: 3 / 5;
       }
 
@@ -91,12 +101,16 @@
     }
 
     &-content-wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
       width: 100%;
     }
 
     &-image {
       &-wrapper {
         margin-bottom: $space-300;
+        width: 100%;
       }
 
       border-radius: 50%;
@@ -106,12 +120,14 @@
     }
 
     &-name {
-      font-family: $font-sans-bold;
+      font-family: $font-serif-reg;
       text-align: center;
     }
 
     &-title {
+      font-size: 0.875rem;
       margin-top: 0;
+      max-width: 12rem;
       text-align: center;
     }
   }

@@ -2,17 +2,13 @@
 // ==== HEADER
 // ===========================================================================
 .header {
-  margin-bottom: $space-600;
   padding-top: $space-550;
   position: relative;
   transition: padding-top 0.3s ease-out;
   width: 100%;
 
-  @include mq($M) {
-    margin-bottom: $space-850;
-  }
   @include mq($L) {
-    padding-top: $space-550;
+    padding-top: $space-500;
     padding-bottom: $space-200;
     position: sticky;
     top: 0;
@@ -37,7 +33,6 @@
   }
 
   @include mq($XL) {
-    margin-bottom: $space-1000;
     padding-top: $space-700;
   }
 

@@ -8,7 +8,6 @@ const Header = ({ menuItems }) => {
   useEffect(() => {
     let scrollPos = window.scrollY;
     const header = document.querySelector('header');
-    // const headerHeight = header.offsetHeight;
 
     const addClassOnScroll = () => header.classList.add('header__background');
     const removeClassOnScroll = () =>
@@ -17,7 +16,7 @@ const Header = ({ menuItems }) => {
     window.addEventListener('scroll', () => {
       scrollPos = window.scrollY;
 
-      if (scrollPos >= 220) {
+      if (scrollPos >= 280) {
         addClassOnScroll();
       } else {
         removeClassOnScroll();

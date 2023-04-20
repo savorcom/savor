@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { useWindowSize } from '../hooks/useWindowSize';
 
@@ -18,7 +17,7 @@ const People = ({ data }) => {
       <h2 className="people__heading">{peopleHeading}</h2>
       <p className="people__subheading">{peopleSubheading}</p>
       <ul className="people__list">
-        {peopleEmployees.map((item, index) => {
+        {peopleEmployees.map((item) => {
           const employeeImg = getImage(item.peopleEmployeeImage);
           return (
             <li
@@ -32,13 +31,7 @@ const People = ({ data }) => {
                   : '100%',
               }}
             >
-              <AnimationOnScroll
-                animateIn="animate__fadeIn"
-                duration={1}
-                delay={peopleEmployees.length * 125 + index * 250}
-                animateOnce
-                className="people__item-content-wrapper"
-              >
+              <div className="people__item-content-wrapper">
                 <div className="people__item-image-wrapper">
                   <GatsbyImage
                     className="people__item-image"
@@ -47,11 +40,8 @@ const People = ({ data }) => {
                   />
                 </div>
                 <p className="people__item-name">{item.peopleEmployeeName}</p>
-                <div
-                  className="people__item-title"
-                  dangerouslySetInnerHTML={{ __html: item.peopleEmployeeTitle }}
-                />
-              </AnimationOnScroll>
+                <p className="people__item-title">{item.peopleEmployeeTitle}</p>
+              </div>
             </li>
           );
         })}
