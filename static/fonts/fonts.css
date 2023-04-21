@@ -3,37 +3,5 @@
 // ======================================================================== */
 
 /* Add the font files to this same directory */
-
-@font-face {
-  font-family: 'Restora-Regular';
-  font-style: normal;
-  src: url('Restora.woff2') format('woff2'), url('Restora.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Restora-Italic';
-  font-style: italic;
-  src: url('RestoraItalic.woff2') format('woff2'),
-    url('RestoraItalic.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Restora-Bold';
-  font-style: normal;
-  src: url('RestoraBold.woff2') format('woff2'),
-    url('RestoraBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Restora-Light';
-  font-style: normal;
-  src: url('RestoraLight.woff2') format('woff2'),
-    url('RestoraLight.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Restora-ExtraLight-Italic';
-  font-style: italic;
-  src: url('RestoraExtraLightItalic.woff2') format('woff2'),
-    url('RestoraExtraLightItalic.woff') format('woff');
-}
+/* Safari no longer supports locally hosted fonts so it's probably best to just use Google fonts
+*/

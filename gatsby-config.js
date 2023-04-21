@@ -40,7 +40,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['PT Sans:400,700'],
+          families: ['PT Sans:400,700', 'Merriweather:300i,400,400i,700'],
         },
         custom: {
           families: [

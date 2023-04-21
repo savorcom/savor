@@ -14,8 +14,10 @@
   }
 
   &__subheading {
-    font-family: $font-serif-xlight-italic;
+    font-family: $font-serif-reg;
     font-size: 2rem;
+    font-style: italic;
+    font-weight: 300;
     line-height: 1;
     margin-bottom: $space-600;
     margin-left: auto;

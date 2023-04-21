@@ -101,8 +101,9 @@ h1,
 .h1,
 h2,
 .h2 {
-  font-family: $font-serif-xlight-italic;
-  font-weight: 100;
+  font-family: $font-serif-reg;
+  font-style: italic;
+  font-weight: 300;
 }
 
 h3 {
