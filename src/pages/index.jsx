@@ -264,6 +264,7 @@ export const query = graphql`
             contactColumnCopy
             contactColumnButtonText
             contactPhoneNumber
+            contactPhoneNumberLinkText
           }
         }
       }

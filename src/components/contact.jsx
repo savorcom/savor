@@ -10,6 +10,7 @@ const Contact = ({ data }) => {
     contactColumnButtonText,
     contactSectionId,
     contactPhoneNumber,
+    contactPhoneNumberLinkText,
   } = data;
 
   const rawPhoneNumber = contactPhoneNumber.replace(/\D/g, '');
@@ -31,7 +32,7 @@ const Contact = ({ data }) => {
           >
             {contactColumnButtonText}
           </a>
-          <a href={`tel:1${rawPhoneNumber}`}>{contactPhoneNumber}</a>
+          <a href={`tel:1${rawPhoneNumber}`}>{contactPhoneNumberLinkText}</a>
         </div>
       </div>
     </section>
@@ -45,6 +46,7 @@ Contact.propTypes = {
     contactColumnButtonText: PropTypes.string,
     contactColumnCopy: PropTypes.string,
     contactPhoneNumber: PropTypes.string,
+    contactPhoneNumberLinkText: PropTypes.string,
   }).isRequired,
 };
 
