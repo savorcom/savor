@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
+import cowGraphic from '../images/cow-graphic.png';
+
 const Problem = ({ data }) => {
   const { problemHeading, leftColumn, rightColumn, problemSectionId } = data;
 
@@ -16,9 +18,15 @@ const Problem = ({ data }) => {
         >
           <div className="problem__column">
             <div>
-              <h3 className="problem__column-heading">
-                7% of greenhouse gas emissions
-              </h3>
+              <img
+                className="problem__column-image"
+                src={cowGraphic}
+                alt="7% of global greenhouse gas emissions come from the production of fats and oils from animals and plants"
+                loading="lazy"
+                width="388"
+                height="400"
+                decoding="async"
+              />
               <div className="problem__column-copy">
                 <p>
                   from the production of fats and oils from animals and plants
