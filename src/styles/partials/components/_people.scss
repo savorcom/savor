@@ -122,10 +122,13 @@
         width: 100%;
       }
 
-      border-radius: 50%;
       max-width: 10rem;
       margin-left: auto;
       margin-right: auto;
+
+      img {
+        border-radius: 50%;
+      }
     }
 
     &-name {

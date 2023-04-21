@@ -5,7 +5,7 @@ body {
   background: $bg-clr;
   background-image: linear-gradient(90deg, rgb(36, 38, 39), rgb(5, 5, 5));
   border-bottom: 12px solid $black;
-  font-family: $font-sans-reg;
+  font-family: $font-sans;
   overflow-x: hidden;
   position: relative;
   width: 100%;
@@ -106,7 +106,8 @@ h2,
 }
 
 h3 {
-  font-family: $font-sans-bold;
+  font-family: $font-sans;
+  font-weight: 700;
 }
 
 h1,
@@ -124,7 +125,8 @@ h4,
 }
 
 strong {
-  font-family: $font-sans-bold;
+  font-family: $font-sans;
+  font-weight: 700;
 }
 
 small {

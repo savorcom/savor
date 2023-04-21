@@ -5,20 +5,6 @@
 /* Add the font files to this same directory */
 
 @font-face {
-  font-family: 'PTSans-Regular';
-  font-style: normal;
-  src: url('PTSans-Regular.woff2') format('woff2'),
-    url('PTSans-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'PTSans-Bold';
-  font-style: normal;
-  src: url('PTSans-Bold.woff2') format('woff2'),
-    url('PT Sans-Bold.woff') format('woff');
-}
-
-@font-face {
   font-family: 'Restora-Regular';
   font-style: normal;
   src: url('Restora.woff2') format('woff2'), url('Restora.woff') format('woff');

@@ -39,13 +39,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        // google: {
-        //   families: ['Open Sans:400,700'],
-        // },
+        google: {
+          families: ['PT Sans:400,700'],
+        },
         custom: {
           families: [
-            'PTSans-Regular',
-            'PTSans-Bold',
             'Restora-Regular',
             'Restora-Italic',
             'Restora-Bold',
