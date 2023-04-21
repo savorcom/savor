@@ -90,13 +90,13 @@
       }
 
       // Brittle code that will properly place the last two items when they are on their own row
-      // &:nth-last-child(2) {
-      //   grid-column: 4 / 7 !important;
-      // }
+      &:nth-last-child(2) {
+        grid-column: 4 / 7 !important;
+      }
 
-      // &:last-child {
-      //   grid-column: 7 / 10;
-      // }
+      &:last-child {
+        grid-column: 7 / 10;
+      }
     }
 
     @include mq($XL) {
