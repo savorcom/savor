@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "dotenv": "^16.0.3",
     "gatsby": "^5.6.1",
     "gatsby-plugin-accessibilityjs": "^1.0.3",
     "gatsby-plugin-google-gtag": "^5.8.0",
