@@ -1,13 +1,18 @@
 .process {
+  margin-bottom: $space-400;
   margin-top: $space-800;
   max-width: 73.75rem;
 
+  @include mq($M) {
+    margin-bottom: $space-800;
+  }
+
   &__heading {
-    margin-bottom: $space-400;
+    margin-bottom: $space-600;
     text-align: center;
 
     @include mq($M) {
-      margin-bottom: $space-600;
+      margin-bottom: $space-800;
     }
   }
 
