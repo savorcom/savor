@@ -263,6 +263,7 @@ export const query = graphql`
             contactColumnHeading
             contactColumnCopy
             contactColumnButtonText
+            contactPhoneNumber
           }
         }
       }
