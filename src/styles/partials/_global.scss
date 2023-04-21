@@ -6,6 +6,8 @@ body {
   background-image: linear-gradient(90deg, rgb(36, 38, 39), rgb(5, 5, 5));
   border-bottom: 12px solid $black;
   font-family: $font-sans-reg;
+  overflow-x: hidden;
+  position: relative;
   width: 100%;
 
   @include mq($L) {
@@ -20,11 +22,30 @@ body {
     border-bottom: 36px solid $black;
   }
 
+  &::before {
+    background-image: url('/footer-blob.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    height: 200px;
+    position: absolute;
+    right: 0;
+    width: 140px;
+    z-index: 0;
+
+    @include mq($L) {
+      height: 300px;
+      width: 210px;
+    }
+  }
+
   &::after {
     background-color: rgba(0, 0, 0, 0.33);
     bottom: 0;
     content: '';
-    height: 200%;
+    height: 50%;
     left: 0;
     object-fit: cover;
     position: absolute;

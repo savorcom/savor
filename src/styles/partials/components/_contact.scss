@@ -4,11 +4,7 @@
   @include mq($L) {
     display: flex;
     justify-content: center;
-    padding-bottom: $space-800;
-  }
-
-  @include mq($XL) {
-    padding-bottom: $space-850;
+    padding-bottom: $space-600;
   }
 
   &__columns {
@@ -72,11 +68,11 @@
 
   &__logo {
     height: auto;
-    transform: translate(3rem, 2.5rem);
+    transform: translate(3rem, 2rem);
     width: 200px;
 
     @include mq($L) {
-      transform: translate(4rem, 0.5rem);
+      transform: translate(4rem, 2rem);
     }
 
     path {
