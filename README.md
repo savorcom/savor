@@ -1,7 +1,6 @@
 # savor-it.com
 
-A boilerplate for static sites built with Gatsby.\
-Built on [Gatsby.js](https://www.gatsbyjs.org/), a static site generator built with React.js.
+Built with Pyrographic Design's boilerplate for static sites built with [Gatsby.js](https://www.gatsbyjs.org/), a static site generator built with React.js.
 
 - production environment - [https://savor-it.com](https://savor-it.com)
 - WordPress backend - [https://admin.savor-it.com/wp-admin](https://admin.savor-it.com/wp-admin)
