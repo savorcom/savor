@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        url: 'https://7vr.3c1.myftpupload.com/graphql/',
+        url: 'https://admin.savor-it.com/wp-admin/graphql/',
         schema: {
           requestConcurrency: 10,
           timeout: 90000,
@@ -41,16 +41,6 @@ module.exports = {
       options: {
         google: {
           families: ['PT Sans:400,700', 'Merriweather:300i,400,400i,700'],
-        },
-        custom: {
-          families: [
-            'Restora-Regular',
-            'Restora-Italic',
-            'Restora-Bold',
-            'Restora-Light',
-            'Restora-ExtraLight-Italic',
-          ],
-          urls: ['/fonts/fonts.css'],
         },
       },
     },
