@@ -1,10 +1,10 @@
-# Gatsby Starter
+# savor-it.com
 
 A boilerplate for static sites built with Gatsby.\
 Built on [Gatsby.js](https://www.gatsbyjs.org/), a static site generator built with React.js.
 
-- production environment - PROD URL GOES HERE
-- staging environment - STAGE URL GOES HERE
+- production environment - [https://savor-it.com](https://savor-it.com)
+- WordPress backend - [https://admin.savor-it.com/wp-admin](https://admin.savor-it.com/wp-admin)
 
 ## Prerequisites
 
@@ -109,22 +109,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
-
-## Docker
-
-#### Testing the build
-
-- clone repo
-- cd into repo
-- `docker build -t dominos-points-for-pies:build . -f Dockerfile-develop`
-- `docker run --rm -it dominos-points-for-pies:build bash`
-- You will be dropped into the /app directory with all entire repo and all the build assets under /app/public
-
-#### Testing with nginx
-
-- clone repo
-- cd into repo
-- `docker build -t dominos-points-for-pies:local . -f Dockerfile-develop`
-- `docker run --rm -p 8080:80 dominos-points-for-pies:local`
-- You should be able to browse the site at http://localhost:8080. Use CTRL-C to exit. This is a near clone of what runs on stage/prod. Only differences is it runs on port 8080 and doesn't have SSL enabled.
-- Sample nginx https://raghuvirkasturi.com/gatsby-nginx-config/
