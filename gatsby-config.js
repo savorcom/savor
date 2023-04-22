@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        url: 'https://admin.savor-it.com/wp-admin/graphql/',
+        url: 'https://admin.savor-it.com/graphql/',
         schema: {
           requestConcurrency: 10,
           timeout: 90000,
