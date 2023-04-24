@@ -256,6 +256,7 @@ export const query = graphql`
               }
               peopleEmployeeName
               peopleEmployeeTitle
+              peopleLinkedinLink
             }
           }
           HomeContact {

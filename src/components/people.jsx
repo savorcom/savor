@@ -33,13 +33,19 @@ const People = ({ data }) => {
             >
               <div className="people__item-content-wrapper">
                 <div className="people__item-image-wrapper">
-                  <GatsbyImage
-                    className="people__item-image"
-                    image={employeeImg}
-                    alt={item.peopleEmployeeImage.altText}
-                  />
+                  <a href={item.peopleLinkedinLink}>
+                    <GatsbyImage
+                      className="people__item-image"
+                      image={employeeImg}
+                      alt={item.peopleEmployeeImage.altText}
+                    />
+                  </a>
                 </div>
-                <p className="people__item-name">{item.peopleEmployeeName}</p>
+                <p className="people__item-name">
+                  <a href={item.peopleLinkedinLink}>
+                    {item.peopleEmployeeName}
+                  </a>
+                </p>
                 <p className="people__item-title">{item.peopleEmployeeTitle}</p>
               </div>
             </li>
@@ -57,9 +63,10 @@ People.propTypes = {
     peopleSubheading: PropTypes.string,
     peopleEmployees: PropTypes.arrayOf(
       PropTypes.shape({
-        employeeImage: PropTypes.shape({}),
-        employeeName: PropTypes.string,
-        employeeTitle: PropTypes.string,
+        peopleEmployeeImage: PropTypes.shape({}),
+        peopleEmployeeName: PropTypes.string,
+        peopleEmployeeTitle: PropTypes.string,
+        peopleLinkedinLink: PropTypes.string,
       })
     ),
   }).isRequired,
