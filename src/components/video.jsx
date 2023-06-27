@@ -1,20 +1,19 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Video = ({ videoUrl }) => (
+const Video = ({ videoFileMp4, videoFileWebm }) => (
   <div className="iframe-container iframe-container-16x9">
-    <iframe
-      src={videoUrl}
-      title="About Savor Foods"
-      width="1920"
-      height="1080"
-      allowFullScreen
-    />
+    <video controls>
+      <source src={videoFileWebm} type="video/webm" />
+      <source src={videoFileMp4} type="video/mp4" />
+    </video>
   </div>
 );
 
 Video.propTypes = {
-  videoUrl: PropTypes.string.isRequired,
+  videoFileMp4: PropTypes.string.isRequired,
+  videoFileWebm: PropTypes.string.isRequired,
 };
 
 export default Video;

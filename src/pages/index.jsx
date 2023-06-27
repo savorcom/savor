@@ -22,7 +22,15 @@ const IndexPage = ({ data }) => (
     <SEO title="" />
     <Hero data={data.allWpPage.edges[0].node.HomeHero} />
     <div className="content-wrapper">
-      <Video videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl} />
+      <Video
+        videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl}
+        videoFileMp4={
+          data.allWpPage.edges[0].node.HomeVideo.videoFileMp4.mediaItemUrl
+        }
+        videoFileWebm={
+          data.allWpPage.edges[0].node.HomeVideo.videoFileWebm.mediaItemUrl
+        }
+      />
       <div className="container">
         <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
       </div>
@@ -79,6 +87,12 @@ IndexPage.propTypes = {
             }),
             HomeVideo: PropTypes.shape({
               videoIframeUrl: PropTypes.string,
+              videoFileMp4: PropTypes.shape({
+                mediaItemUrl: PropTypes.string,
+              }),
+              videoFileWebm: PropTypes.shape({
+                mediaItemUrl: PropTypes.string,
+              }),
             }),
             HomeBigTextOnImage: PropTypes.shape({
               backgroundImage: PropTypes.shape({
@@ -190,6 +204,12 @@ export const query = graphql`
           }
           HomeVideo {
             videoIframeUrl
+            videoFileMp4 {
+              mediaItemUrl
+            }
+            videoFileWebm {
+              mediaItemUrl
+            }
           }
           HomeBigTextOnImage {
             backgroundImage {
