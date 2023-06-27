@@ -9,12 +9,15 @@
   }
 
   &__heading {
+    font-family: $font-serif-light;
+    font-style: normal;
+    font-weight: 400;
     margin-bottom: $space-550;
     text-align: center;
   }
 
   &__subheading {
-    font-family: $font-serif-reg;
+    font-family: $font-serif-xlight-italic;
     font-size: 2rem;
     font-style: italic;
     font-weight: 300;
@@ -134,8 +137,12 @@
     }
 
     &-name {
-      font-family: $font-serif-reg;
+      font-family: $font-serif-light;
       text-align: center;
+
+      a {
+        border: 0;
+      }
     }
 
     &-title {

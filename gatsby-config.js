@@ -42,6 +42,15 @@ module.exports = {
         google: {
           families: ['PT Sans:400,700', 'Merriweather:300i,400,400i,700'],
         },
+        custom: {
+          families: [
+            'Restora-Regular',
+            'Restora-Italic',
+            'Restora-Bold',
+            'Restora-ExtraLight-Italic',
+          ],
+          urls: ['/fonts/fonts.css'],
+        },
       },
     },
     {
