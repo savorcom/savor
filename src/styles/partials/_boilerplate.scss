@@ -35,11 +35,13 @@ html {
 
 ::-moz-selection {
   background: $selection;
+  color: #111;
   text-shadow: none;
 }
 
 ::selection {
   background: $selection;
+  color: #111;
   text-shadow: none;
 }
 
