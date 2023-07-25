@@ -2,11 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import poster from '../images/video-thumbnail.jpg';
-
-const Video = ({ videoFileMp4, videoFileWebm }) => (
+const Video = ({ videoFileMp4, videoFileWebm, videoThumbnail }) => (
   <div className="iframe-container iframe-container-16x9">
-    <video controls poster={poster}>
+    <video controls poster={videoThumbnail}>
       <source src={videoFileWebm} type="video/webm" />
       <source src={videoFileMp4} type="video/mp4" />
     </video>
@@ -16,6 +14,11 @@ const Video = ({ videoFileMp4, videoFileWebm }) => (
 Video.propTypes = {
   videoFileMp4: PropTypes.string.isRequired,
   videoFileWebm: PropTypes.string.isRequired,
+  videoThumbnail: PropTypes.string,
+};
+
+Video.defaultProps = {
+  videoThumbnail: '',
 };
 
 export default Video;

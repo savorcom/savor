@@ -30,6 +30,9 @@ const IndexPage = ({ data }) => (
         videoFileWebm={
           data.allWpPage.edges[0].node.HomeVideo.videoFileWebm.mediaItemUrl
         }
+        videoThumbnail={
+          data.allWpPage.edges[0].node.HomeVideo.videoThumbnail.mediaItemUrl
+        }
       />
       <div className="container">
         <Problem data={data.allWpPage.edges[0].node.HomeProblem} />
@@ -91,6 +94,9 @@ IndexPage.propTypes = {
                 mediaItemUrl: PropTypes.string,
               }),
               videoFileWebm: PropTypes.shape({
+                mediaItemUrl: PropTypes.string,
+              }),
+              videoThumbnail: PropTypes.shape({
                 mediaItemUrl: PropTypes.string,
               }),
             }),
@@ -208,6 +214,9 @@ export const query = graphql`
               mediaItemUrl
             }
             videoFileWebm {
+              mediaItemUrl
+            }
+            videoThumbnail {
               mediaItemUrl
             }
           }
