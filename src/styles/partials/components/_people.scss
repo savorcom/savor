@@ -53,7 +53,7 @@
 
   &__list {
     display: grid;
-    gap: $space-600;
+    gap: $space-500;
     justify-content: center;
 
     @include mq($S) {
@@ -144,7 +144,7 @@
     &-title {
       font-size: 0.875rem;
       margin-top: 0;
-      max-width: 12rem;
+      max-width: 12.5rem;
       text-align: center;
     }
   }

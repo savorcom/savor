@@ -36,6 +36,10 @@
     line-height: 1.2;
     margin-bottom: $space-550;
     max-width: 66.66666%;
+
+    &--success {
+      max-width: none;
+    }
   }
 
   &__two-col {
