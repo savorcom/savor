@@ -86,28 +86,11 @@ const SubscribeForm = () => {
           onSubmit={handleSubmit}
           method="post"
         >
-          <FormInput
-            id="fname"
-            name="FNAME"
-            label="First Name"
-            labelClass="visuallyhidden"
-            placeholder="First Name"
-          />
-          <FormInput
-            id="lname"
-            name="LNAME"
-            label="Last Name"
-            labelClass="visuallyhidden"
-            placeholder="Last Name"
-          />
-          <FormInput
-            id="email"
-            type="email"
-            name="Email"
-            label="Email"
-            labelClass="visuallyhidden"
-            placeholder="Email"
-          />
+          <div className="pop-up-form__two-col">
+            <FormInput id="fname" name="FNAME" label="First Name" />
+            <FormInput id="lname" name="LNAME" label="Last Name" />
+          </div>
+          <FormInput id="email" type="email" name="Email" label="Email" />
           <button className="pop-up-form__button" type="submit">
             Subscribe
           </button>
