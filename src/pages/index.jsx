@@ -290,11 +290,12 @@ export const query = graphql`
           }
           HomeContact {
             contactSectionId
-            contactColumnHeading
-            contactColumnCopy
-            contactColumnButtonText
-            contactPhoneNumber
-            contactPhoneNumberLinkText
+            contactColumnHeading1
+            contactColumnCopy1
+            contactColumnButtonText1
+            contactColumnHeading2
+            contactColumnCopy2
+            contactColumnButtonText2
           }
         }
       }

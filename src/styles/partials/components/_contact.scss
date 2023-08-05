@@ -10,7 +10,7 @@
   &__columns {
     display: flex;
     flex-direction: column;
-    gap: 16rem;
+    gap: 4rem;
     padding-bottom: $space-300;
     position: relative;
     text-align: center;
@@ -19,22 +19,8 @@
     @include mq($M) {
       border-bottom: 2px solid $black;
       flex-direction: row;
-      justify-content: center;
-
-      &::after {
-        background-image: url('/footer-t.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        bottom: 0;
-        content: '';
-        height: 110px;
-        position: absolute;
-        width: 160px;
-      }
-    }
-
-    @include mq($L) {
-      gap: 18rem;
+      gap: 2rem;
+      justify-content: space-evenly;
     }
   }
 
@@ -43,11 +29,11 @@
     display: flex;
     flex-direction: column;
 
-    &:first-of-type {
-      display: none;
+    &:nth-of-type(2) {
+      order: -1;
 
       @include mq($M) {
-        display: block;
+        order: unset;
       }
     }
 
@@ -69,12 +55,7 @@
 
   &__logo {
     height: auto;
-    transform: translate(3rem, 2rem);
     width: 200px;
-
-    @include mq($L) {
-      transform: translate(4rem, 2rem);
-    }
 
     path {
       fill: #050505;

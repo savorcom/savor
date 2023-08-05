@@ -4,23 +4,10 @@
 body {
   background: $bg-clr;
   background-image: linear-gradient(90deg, rgb(36, 38, 39), rgb(5, 5, 5));
-  border-bottom: 12px solid $black;
   font-family: $font-sans;
   overflow-x: hidden;
   position: relative;
   width: 100%;
-
-  @include mq($L) {
-    border-bottom: 18px solid $black;
-  }
-
-  @include mq($XL) {
-    border-bottom: 24px solid $black;
-  }
-
-  @include mq($XXL) {
-    border-bottom: 36px solid $black;
-  }
 
   &::before {
     background-image: url('/footer-blob.png');

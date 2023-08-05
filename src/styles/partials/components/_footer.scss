@@ -1,0 +1,24 @@
+.footer {
+  background-color: $beige;
+  padding-bottom: $space-400;
+
+  @include mq($L) {
+    padding-bottom: $space-600;
+  }
+
+  > .container {
+    display: flex;
+  }
+
+  &__links-list {
+    display: flex;
+  }
+
+  &__links-item {
+    &::before {
+      content: '|';
+      margin-right: $space-200;
+      padding-left: $space-200;
+    }
+  }
+}
