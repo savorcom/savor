@@ -77,7 +77,9 @@ const ContactForm = () => {
           height="46"
           decoding="async"
         />
-        <p className="pop-up-form__copy">Want to get in touch?</p>
+        <p className="pop-up-form__copy">
+          Reach out if you&apos;re making better food & you need a better fat.
+        </p>
         <form className="pop-up-form__form" onSubmit={handleSubmit}>
           <div className="pop-up-form__two-col">
             <FormInput id="fname" name="FNAME" label="First Name" />
