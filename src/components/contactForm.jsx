@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import jsonp from 'jsonp';
 
 import FormInput from './patterns/formInput';
-import subscribeFormImage from '../images/subscribe-form-image.jpg';
+import contactFormImage from '../images/contact-form-image.jpg';
 import savorLogo from '../images/savor-logo-dark.svg';
 
 const ContactForm = () => {
@@ -36,7 +36,7 @@ const ContactForm = () => {
         <div className="pop-up-form__image-container">
           <img
             className="pop-up-form__image"
-            src={subscribeFormImage}
+            src={contactFormImage}
             alt="a fresh stack of pancakes with a melting pat of butter on top"
             decoding="async"
           />
@@ -63,7 +63,7 @@ const ContactForm = () => {
       <div className="pop-up-form__image-container">
         <img
           className="pop-up-form__image"
-          src={subscribeFormImage}
+          src={contactFormImage}
           alt="a fresh stack of pancakes with a melting pat of butter on top"
           decoding="async"
         />
