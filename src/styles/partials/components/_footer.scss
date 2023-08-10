@@ -2,23 +2,38 @@
   background-color: $beige;
   padding-bottom: $space-400;
 
-  @include mq($L) {
+  @include mq($M) {
     padding-bottom: $space-600;
   }
 
   > .container {
     display: flex;
+    flex-direction: column;
+    gap: $space-300;
+
+    @media (min-width: 42rem) {
+      flex-direction: row;
+    }
   }
 
   &__links-list {
     display: flex;
+    flex-direction: column;
+    gap: $space-300;
+
+    @media (min-width: 42rem) {
+      flex-direction: row;
+    }
   }
 
   &__links-item {
     &::before {
       content: '|';
       margin-right: $space-200;
-      padding-left: $space-200;
+
+      @media (min-width: 42rem) {
+        padding-left: $space-200;
+      }
     }
   }
 }

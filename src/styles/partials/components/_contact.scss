@@ -1,7 +1,7 @@
 .contact {
   padding-bottom: $space-400;
 
-  @include mq($L) {
+  @include mq($M) {
     display: flex;
     justify-content: center;
     padding-bottom: $space-600;
