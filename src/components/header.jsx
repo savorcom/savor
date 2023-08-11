@@ -16,7 +16,10 @@ const Header = ({ menuItems }) => {
     window.addEventListener('scroll', () => {
       scrollPos = window.scrollY;
 
-      if (scrollPos >= 280) {
+      if (
+        scrollPos >= 280 ||
+        document.body.classList.contains('ReactModal__Body--open')
+      ) {
         addClassOnScroll();
       } else {
         removeClassOnScroll();

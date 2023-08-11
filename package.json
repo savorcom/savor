@@ -25,12 +25,14 @@
     "gatsby-source-graphql": "^5.6.0",
     "gatsby-source-wordpress": "^7.9.0",
     "gatsby-transformer-sharp": "^5.6.0",
+    "jsonp": "^0.2.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-anchor-link-smooth-scroll-v2": "^2.0.1",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-modal": "^3.16.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",

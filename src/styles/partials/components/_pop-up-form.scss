@@ -1,0 +1,72 @@
+.pop-up-form {
+  display: flex;
+  max-width: 54rem;
+
+  &__image-container {
+    display: none;
+
+    @include mq($M) {
+      display: block;
+      flex-basis: 50%;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__form-container {
+    flex-basis: 100%;
+    padding: $space-550;
+
+    @include mq($M) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__logo {
+    margin-bottom: $space-550;
+  }
+
+  &__copy {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: $space-550;
+    max-width: 66.66666%;
+
+    &--success {
+      max-width: none;
+    }
+  }
+
+  &__two-col {
+    display: flex;
+    gap: $space-300;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-400;
+  }
+
+  &__button {
+    align-self: flex-start;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $copper;
+    border: 0;
+    border-radius: $space-200;
+    color: $white;
+    padding: $space-300 $space-500;
+    transition: background-color 0.2s ease-out;
+
+    &:focus,
+    &:hover {
+      background-color: darken($copper, 10%);
+    }
+  }
+}

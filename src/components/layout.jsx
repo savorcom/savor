@@ -8,6 +8,7 @@ import 'animate.css/animate.min.css';
 import HeroImage from './heroImage';
 import Header from './header';
 import Drip from './drip';
+import Footer from './footer';
 
 const Layout = ({ children, heroImage, menuItems }) => (
   <Fragment>
@@ -25,6 +26,7 @@ const Layout = ({ children, heroImage, menuItems }) => (
     <main className="main" id="main" role="main">
       {children}
     </main>
+    <Footer />
   </Fragment>
 );
 

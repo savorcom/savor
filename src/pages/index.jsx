@@ -23,7 +23,6 @@ const IndexPage = ({ data }) => (
     <Hero data={data.allWpPage.edges[0].node.HomeHero} />
     <div className="content-wrapper">
       <Video
-        videoUrl={data.allWpPage.edges[0].node.HomeVideo.videoIframeUrl}
         videoFileMp4={
           data.allWpPage.edges[0].node.HomeVideo.videoFileMp4.mediaItemUrl
         }
@@ -89,7 +88,6 @@ IndexPage.propTypes = {
               }),
             }),
             HomeVideo: PropTypes.shape({
-              videoIframeUrl: PropTypes.string,
               videoFileMp4: PropTypes.shape({
                 mediaItemUrl: PropTypes.string,
               }),
@@ -209,7 +207,6 @@ export const query = graphql`
             }
           }
           HomeVideo {
-            videoIframeUrl
             videoFileMp4 {
               mediaItemUrl
             }
@@ -290,11 +287,12 @@ export const query = graphql`
           }
           HomeContact {
             contactSectionId
-            contactColumnHeading
-            contactColumnCopy
-            contactColumnButtonText
-            contactPhoneNumber
-            contactPhoneNumberLinkText
+            contactColumnHeading1
+            contactColumnCopy1
+            contactColumnButtonText1
+            contactColumnHeading2
+            contactColumnCopy2
+            contactColumnButtonText2
           }
         }
       }

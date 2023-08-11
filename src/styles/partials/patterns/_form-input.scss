@@ -1,0 +1,15 @@
+.form-input {
+  background-color: #fff;
+  border: 1px solid $copper;
+  color: $color-grey-1;
+  padding: $space-400;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-grey-2;
+  }
+}
+
+textarea {
+  height: 10rem;
+}

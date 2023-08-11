@@ -8,6 +8,8 @@
 @import 'partials/forms';
 @import 'partials/helpers';
 @import 'partials/patterns/buttons';
+@import 'partials/patterns/modal';
+@import 'partials/patterns/form-input';
 @import 'partials/components/header';
 @import 'partials/components/drip';
 @import 'partials/components/hero';
@@ -18,5 +20,7 @@
 @import 'partials/components/products';
 @import 'partials/components/people';
 @import 'partials/components/contact';
+@import 'partials/components/pop-up-form';
+@import 'partials/components/footer';
 //@import 'partials/html-linter'; // for development only
 //@import 'partials/mq-helper'; // for development only
