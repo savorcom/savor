@@ -16,8 +16,9 @@ const SubscribeForm = () => {
     const formJson = Object.fromEntries(formData.entries());
     const { fname, lname, email } = formJson;
 
-    const url = process.env.MAILCHIMP_URL;
-    console.log('url', url);
+    const url =
+      'https://savor-it.us21.list-manage.com/subscribe/post-json?u=390af2b2c93642c3bc671994d&amp;id=789a6db0e3&amp;f_id=002c5be1f0';
+
     jsonp(
       `${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}`,
       { param: 'c' },
