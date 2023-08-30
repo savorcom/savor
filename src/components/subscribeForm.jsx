@@ -16,13 +16,12 @@ const SubscribeForm = () => {
     const formJson = Object.fromEntries(formData.entries());
     const { fname, lname, email } = formJson;
 
-    const url = process.env.MAILCHIMP_URL;
+    const url = process.env.GATSBY_MAILCHIMP_URL;
     jsonp(
       `${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}`,
       { param: 'c' },
       (_, data) => {
         const { result } = data;
-        console.log('result:', result);
 
         if (result === 'success') {
           setSubmitSuccess(true);
