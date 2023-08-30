@@ -16,8 +16,8 @@ const SubscribeForm = () => {
     const formJson = Object.fromEntries(formData.entries());
     const { fname, lname, email } = formJson;
 
-    const url = process.env.GATSBY_MAILCHIMP_URL;
-    console.log('url', process.env.GATSBY_MAILCHIMP_URL);
+    const url = process.env.MAILCHIMP_URL;
+    console.log('url', process.env.MAILCHIMP_URL);
     jsonp(
       `${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}`,
       { param: 'c' },
