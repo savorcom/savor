@@ -17,7 +17,7 @@ const SubscribeForm = () => {
     const { fname, lname, email } = formJson;
 
     const url = process.env.MAILCHIMP_URL;
-    console.log('url', process.env.MAILCHIMP_URL);
+    console.log('url', url);
     jsonp(
       `${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}`,
       { param: 'c' },
